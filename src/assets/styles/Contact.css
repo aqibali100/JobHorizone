@@ -1,0 +1,21 @@
+.form-text h1 span{
+    color: #4440da;
+}
+form input{
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #4440da;
+    font-size: 13px;
+    color: #7c6f6f;
+}
+form textarea{
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #4440da;
+    font-size: 13px;
+    color: #7c6f6f;
+}

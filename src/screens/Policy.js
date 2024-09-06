@@ -1,5 +1,6 @@
 import React from 'react'
 import '../assets/styles/Policy.css'
+import { Link } from 'react-router-dom'
 
 const Policy = () => {
     return (
@@ -91,7 +92,7 @@ const Policy = () => {
                                 <p className='policy-para mb-5'>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy. After this period, we will securely delete or anonymize your data, unless retention is required to comply with legal obligations, resolve disputes, or enforce agreements.</p>
 
                                 <h3 className='policy-heading mb-3'>5:  Google AdSense and Analytics</h3>
-                                <p className='policy-para mb-5'>We use Google AdSense to display ads on JobHorizon. Google may use cookies and other tracking technologies to show you personalized ads based on your browsing behavior. For more information on how Google uses your data, please visit the Google Privacy Policy.</p>
+                                <p className='policy-para mb-5'>We use Google AdSense to display ads on JobHorizon. Google may use cookies and other tracking technologies to show you personalized ads based on your browsing behavior. For more information on how Google uses your data, please visit the <Link target='_blank' to='https://policies.google.com/privacy'>Google Privacy Policy</Link>.</p>
                                 <p className='policy-para mb-5'>We also use Google Analytics to gather statistical data about how users interact with our website. This helps us improve our content and services. Google Analytics does not identify individual users.</p>
 
                                 <h3 className='policy-heading mb-3'>6: Children’s Privacy</h3>
