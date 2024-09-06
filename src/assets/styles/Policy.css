@@ -1,0 +1,14 @@
+.policy-heading{
+    color: #4440da;
+    font-size: 19px;
+}
+.policy-para {
+    color: #817272;
+    font-size: 14px;
+}
+.policy-para ul li {
+    list-style: decimal;
+}
+.policy-sub-heading{
+    font-size: 15px;
+}

@@ -1,0 +1,11 @@
+.terms-heading{
+    color: #4440da;
+    font-size: 19px;
+}
+.terms-para {
+    color: #817272;
+    font-size: 14px;
+}
+.terms-para ul li {
+    list-style: decimal;
+}
