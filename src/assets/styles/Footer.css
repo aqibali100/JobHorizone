@@ -1,0 +1,15 @@
+.copyright-bg {
+    background-color: #f5f7fb;
+    padding: 20px 0px;
+}
+
+.copyright-text p {
+    color: #32313d;
+    margin: 0px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.copyright-text p span {
+    color: #4440da;
+}
