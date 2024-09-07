@@ -1,28 +1,27 @@
-import React, { useRef, useState } from 'react';
-import '../../assets/style/style.css';
-import waveImg from "../../assets/images/wave.png";
-import bgImg from "../../assets/images/bg.png";
-import avatarImg from "../../assets/images/Logo.png";
-import { useFormik } from 'formik';
+import React, { useState } from 'react'
+import '../../assets/styles/Login.css'
+import loginBG from '../../assets/images/bg.png'
+import logo from '../../assets/images/logo.jpg'
+import Loading from '../loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
+import { LoginSchema, RegistrationSchema } from '../validation/Validate';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch} from 'react-redux';
 import { registerUser } from '../../reducers/UserSlice';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import Loading from '../loading/Loading';
-import { RegistrationSchema } from '../validation/Validaton';
-
 
 const Register = () => {
-    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const togglePasswordVisibility = () => {
         setShowPassword((prevState) => !prevState);
     };
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -54,114 +53,106 @@ const Register = () => {
             }
         },
     });
-
     return (
-        <div>
-            <img className="wave" src={waveImg} alt="Wave-Background" />
-            <div className="container1">
-                <div className="img">
-                    <img src={bgImg} alt="Background" />
-                </div>
-                <div className="login-content">
-                    <form onSubmit={formik.handleSubmit} className='form-border'>
-                        <div className='login-icon'>
-                            <img className='avatar' src={avatarImg} alt="Avatar" />
-                        </div>
-                        <h2 className="title">Sign Up</h2>
-                        <div className="input-div one">
-                            <div className="i">
-                                <i className="fas fa-user"></i>
-                            </div>
-                            <div className="div">
-                                <input
-                                    type="text"
-                                    className="input"
-                                    placeholder='Full Name'
-                                    id="name"
-                                    name="name"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.name}
-                                />
+        <>
+            <div class="login-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="login-img">
+                                <img src={loginBG}></img>
                             </div>
                         </div>
-                        {formik.touched.name && formik.errors.name ? (
-                            <div className="error-message">{formik.errors.name}</div>
-                        ) : null}
-                        <div className="input-div pass">
-                            <div className="i">
-                                <i className="fa-solid fa-envelope"></i>
-                            </div>
-                            <div className="div">
-                                <input
-                                    type="email"
-                                    className="input"
-                                    placeholder='Email'
-                                    id="email"
-                                    name="email"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.email}
-                                />
+                        <div class="col-md-6">
+                            <div className="login-content">
+                                <form className='form-border' onSubmit={formik.handleSubmit}>
+                                    <div className='login-icon'>
+                                        <img className='avatar' src={logo} alt="Avatar" />
+                                    </div>
+                                    <h2 className="title text-center mt-3">Sign Up</h2>
+                                    <div className="input-div">
+                                        <div className="div">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                placeholder="Name"
+                                                className='mt-3'
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.name}
+                                            />
+                                        </div>
+                                    </div>
+                                    {formik.touched.name && formik.errors.name ? (
+                                        <div className="error">{formik.errors.name}</div>
+                                    ) : null}
+                                    <div className="input-div">
+                                        <div className="div">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder="Email"
+                                                className='mt-3'
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.email}
+                                            />
+                                        </div>
+                                    </div>
+                                    {formik.touched.email && formik.errors.email ? (
+                                        <div className="error">{formik.errors.email}</div>
+                                    ) : null}
+                                    <div className="input-div pass">
+                                        <div className="div">
+                                            <input
+                                                type={showPassword ? "text" : "password"}
+                                                name="password"
+                                                className='mt-3'
+                                                placeholder="Password"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.password}
+                                            />
+                                            <span onClick={togglePasswordVisibility} style={{ cursor: 'pointer', position: 'absolute', top: '15px' }}>
+                                                <FontAwesomeIcon className='i' icon={showPassword ? faEyeSlash : faEye} />
+                                            </span>
+                                        </div>
+                                    </div>
+                                    {formik.touched.password && formik.errors.password ? (
+                                        <div className="error">{formik.errors.password}</div>
+                                    ) : null}
+                                    <div className="input-div">
+                                        <div className="div">
+                                            <input
+                                                type="number"
+                                                name="phone"
+                                                placeholder="phone"
+                                                className='mt-3'
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.phone}
+                                            />
+                                        </div>
+                                    </div>
+                                    {formik.touched.phone && formik.errors.phone ? (
+                                        <div className="error">{formik.errors.phone}</div>
+                                    ) : null}
+                                    <div class="login-btn text-center mt-3">
+                                        <button className='btn' type="submit" disabled={loading}>
+                                            {loading ? <Loading /> : 'Sign Up'}
+                                        </button>
+                                    </div>
+                                    <div className='account text-center mt-4'>
+                                        Alreadt have an account?    <Link to="/login">Login</Link>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        {formik.touched.email && formik.errors.email ? (
-                            <div className="error-message">{formik.errors.email}</div>
-                        ) : null}
-                        <div className="input-div pass">
-                            <div className="i">
-                                <i className="fas fa-lock"></i>
-                            </div>
-                            <div className="div">
-                                <input
-                                    type={showPassword ? "text" : "password"}
-                                    className="input"
-                                    placeholder="Password"
-                                    id="password"
-                                    name="password"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.password}
-                                />
-                                <span onClick={togglePasswordVisibility} style={{ cursor: 'pointer', position: 'absolute', top: '15px' }}>
-                                    <FontAwesomeIcon className='i' icon={showPassword ? faEyeSlash : faEye} />
-                                </span>
-                            </div>
-                        </div>
-                        {formik.touched.password && formik.errors.password ? (
-                            <div className="error-message">{formik.errors.password}</div>
-                        ) : null}
-                        <div className="input-div pass">
-                            <div className="i">
-                                <i className="fa-solid fa-phone"></i>
-                            </div>
-                            <div className="div">
-                                <input
-                                    type="number"
-                                    className="input"
-                                    placeholder='Phone Number'
-                                    id="phone"
-                                    name="phone"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.phone}
-                                />
-                            </div>
-                        </div>
-                        {formik.touched.phone && formik.errors.phone ? (
-                            <div className="error-message">{formik.errors.phone}</div>
-                        ) : null}
-                        <button className='btn' type="submit" disabled={loading}>
-                            {loading ? <Loading /> : 'Sign Up'}
-                        </button>
-                        <div className='account'>
-                            Already have an account?   <Link to="/"> Login</Link>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
-export default Register;
+export default Register

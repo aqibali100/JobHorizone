@@ -15,4 +15,38 @@
 .login-content{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 15px 25px;
+    margin-top: 36px;
+    border-radius: 15px;
+}
+.forget a{
+    text-decoration: none;
+    font-size: 10px;
+}
+.login-btn button{
+    width: 100%;
+    background: #4440da;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 19px;
+}
+.login-btn button:hover{
+    background: #4440da;
+    color: white;
+}
+.radio p{
+    font-size: 12px;
+}
+.title{
+    font-size: 24px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
+
+@media (max-width: 489px) {
+    .login-img{
+        height: 64vh;
+    }
 }
