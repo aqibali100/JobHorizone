@@ -101,7 +101,7 @@ nav ul li a.active::after {
 }
 
 .mobile-navbar a:hover {
-    color: #1976d2;
+    color: #4440da;
     transition: all 0.3s ease;
 }
 
@@ -141,6 +141,25 @@ nav ul li a.active::after {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.employer-btn {
+    padding: 7px 29px;
+    background: #4440da;
+    border-radius: 30px;
+    color: white;
+}
+
+.employer-btn a {
+    color: white;
+    font-size: 20px;
+}
+
+.employer-btn a:hover {
+    color: white;
+}
+
+.employer-btn a.active {
+    color: white;
+}
 
 @media (max-width: 1009px) {
     .menu-icon {

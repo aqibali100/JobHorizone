@@ -7,6 +7,7 @@ import Policy from './screens/Policy';
 import Terms from './screens/Terms';
 import About from './screens/About';
 import Contact from './screens/Contact';
+import Login from './components/auth/Login';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/privacy-policy" element={<Policy />} />

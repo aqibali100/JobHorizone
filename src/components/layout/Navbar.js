@@ -53,6 +53,7 @@ const Navbar = () => {
                     <li><NavLink to="/privacy-policy" className={location.pathname === '/privacy-policy' ? 'active' : ''}>Privacy Policy</NavLink></li>
                     <li><NavLink to="/terms-and-conditions" className={location.pathname === '/terms-and-conditions' ? 'active' : ''}>Terms & Conditions</NavLink></li>
                     <li><NavLink to="/contact-us" className={location.pathname === '/contact-us' ? 'active' : ''}>Contact</NavLink></li>
+                    <li className='employer-btn'><NavLink to="/login">Login</NavLink></li>
                   </ul>
                 </nav>
                 <div className="menu-icon">
@@ -76,6 +77,7 @@ const Navbar = () => {
               <Link to='/all-jobs' onClick={handleLinkClick}>All Jobs</Link>
               <Link to='/privacy-policy' onClick={handleLinkClick}>Privacy Policy</Link>
               <Link to='/terms-and-conditions' onClick={handleLinkClick}>Terms & Conditions</Link>
+              <Link to='/login' className='employer-btn text-white' onClick={handleLinkClick}>Login</Link>
             </nav>
           </div>
         </ClickAwayListener>
