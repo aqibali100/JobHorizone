@@ -48,6 +48,11 @@
     border-radius: 6px;
     width: 100%;
     padding: 15px 10px;
+    transition: all 0.3s ease;
+}
+
+.plateform-cards:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 15px;
 }
 
 .card-text h5 {
@@ -91,7 +96,8 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 15px;
     border-radius: 8px;
 }
-.slider-card-text p{
+
+.slider-card-text p {
     margin: 0px;
     color: grey;
 }
@@ -112,19 +118,21 @@
 }
 
 .custom-carousel .carousel-control-prev,
-.custom-carousel .carousel-control-next{
+.custom-carousel .carousel-control-next {
     display: flex;
     align-items: center;
 }
-.resume-bg{
+
+.resume-bg {
     background-color: #4440da;
     border-radius: 25px;
 }
-.resume-img{
+
+.resume-img {
     text-align: center;
 }
 
-.resume-img img{
+.resume-img img {
     height: auto;
     max-width: 100%;
     border: none;
@@ -132,36 +140,120 @@
     box-shadow: none;
     width: 50%;
 }
-.resume-text{
+
+.resume-text {
     height: 240px;
 }
-.resume-text h1{
+
+.resume-text h1 {
     margin-top: 35px;
     margin-bottom: 0px;
 }
-.resume-text p{
+
+.resume-text p {
     margin-top: 30px;
     margin-bottom: 0px;
     color: #e9d7d7;
 }
 
+.job-card {
+    width: 100%;
+    padding: 10px 25px;
+    background: white;
+    border-radius: 9px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.job-icon {
+    width: 55px;
+}
+
+.job-icon img {
+    width: 100%;
+}
+
+.job-head {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.job-title h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.job-location {
+    margin-top: 16px;
+}
+
+.job-location span {
+    color: #4440da;
+    margin-left: 25px;
+}
+
+.job-post-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.job-post-date p {
+    font-size: 13px;
+}
+
+.job-post-date .job-type {
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+}
+
+.more-jobs-btn {
+    text-align: center;
+}
+
+.more-jobs-btn button {
+    background: white;
+    color: #4440da;
+    border: 1px solid #4440da;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.7s ease;
+}
+
+.more-jobs-btn button:hover {
+    background: #4440da;
+    color: white;
+}
 
 @media (max-width: 1009px) {
-    .slider-card-text{
+    .slider-card-text {
         width: 441px;
     }
 }
+
 @media (max-width: 578px) {
-    .slider-card-text{
+    .slider-card-text {
         width: 285px;
     }
 }
 
 @media (max-width: 995px) {
-    .resume-text h1{
+    .resume-text h1 {
         font-size: 23px;
     }
-    .resume-text p{
+
+    .resume-text p {
         font-size: 15px;
     }
 }

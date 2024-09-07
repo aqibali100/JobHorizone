@@ -13,3 +13,30 @@
 .copyright-text p span {
     color: #4440da;
 }
+
+.logo-img {
+    width: 90px;
+}
+
+.logo-img img {
+    width: 100%;
+}
+.footer-logo{
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo p {
+    margin: 0;  
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-logo p span {
+    color: #4440da;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: black;
+}
