@@ -1,6 +1,7 @@
 .copyright-bg {
     background-color: #f5f7fb;
     padding: 20px 0px;
+    border-top: 1px solid #9696d7;
 }
 
 .copyright-text p {
@@ -21,13 +22,18 @@
 .logo-img img {
     width: 100%;
 }
-.footer-logo{
+
+.footer-bg {
+    background-color: #f5f7fb;
+}
+
+.footer-logo {
     display: flex;
     align-items: center;
 }
 
 .footer-logo p {
-    margin: 0;  
+    margin: 0;
     font-size: 20px;
     font-weight: 600;
 }
@@ -39,4 +45,41 @@
 .footer-logo a {
     text-decoration: none;
     color: black;
+}
+
+.footer-link ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-link ul li a:hover {
+    color: #4440da;
+    padding-left: 10px;
+}
+
+.footer-link ul {
+    padding: 0px;
+}
+
+.footer-link ul li {
+    padding-bottom: 10px;
+}
+
+.footer-title h3 {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.footer-title h3 span {
+    color: #4440da;
+}
+
+.footer-text p {
+    font-size: 13px;
+    margin: 0px;
+}
+.newsletter form input{
+    font-size: 12px;
 }
