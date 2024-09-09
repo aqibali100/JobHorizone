@@ -160,6 +160,14 @@ nav ul li a.active::after {
 .employer-btn a.active {
     color: white;
 }
+.profile{
+    width: 42px;
+    border-radius: 50%;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
 
 @media (max-width: 1009px) {
     .menu-icon {

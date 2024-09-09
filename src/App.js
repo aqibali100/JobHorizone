@@ -15,6 +15,8 @@ import RoleSelection from './screens/RoleSelection';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Jobs from './screens/Jobs';
+import Employ from './screens/Employ';
+import JobPostForm from './screens/JobPostForm';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
+        <Route path="/employer-dashboard" element={<Employ />} />
+        <Route path="/job-post-form" element={<JobPostForm />} />
       </Routes>
       <Footer />
       <ToastContainer />

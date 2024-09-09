@@ -31,7 +31,11 @@ const RoleSelection = () => {
         if (selectedRole) {
             dispatch(updateUserRole({ userId, role: selectedRole }));
             toast.success('Registration successful!');
-            navigate('/employer-dashboard');
+            if (selectedRole === 'employer') {
+                navigate('/employer-dashboard');
+            } else {
+                navigate('/');
+            }
         }
     };
     const isChecked = (role) => selectedRole === role;

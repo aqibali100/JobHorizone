@@ -5,11 +5,14 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
+import { useSelector } from 'react-redux';
+import defaultImg from '../../assets/images/no-user.jpg'
 
 const Navbar = () => {
   const location = useLocation();
   const [navOpen, setNavOpen] = useState(false);
   const [closing, setClosing] = useState(false);
+  const isAuthenticated = useSelector((state) => state.users.user);
   const handleNavOpen = () => {
     setNavOpen(true);
     setClosing(false);
@@ -53,7 +56,17 @@ const Navbar = () => {
                     <li><NavLink to="/privacy-policy" className={location.pathname === '/privacy-policy' ? 'active' : ''}>Privacy Policy</NavLink></li>
                     <li><NavLink to="/terms-and-conditions" className={location.pathname === '/terms-and-conditions' ? 'active' : ''}>Terms & Conditions</NavLink></li>
                     <li><NavLink to="/contact-us" className={location.pathname === '/contact-us' ? 'active' : ''}>Contact</NavLink></li>
-                    <li className='employer-btn'><NavLink to="/login">Login</NavLink></li>
+                    <li className='profile'>
+                      {isAuthenticated ? (
+                        <Link to="/profile">
+                          <img src= {defaultImg} alt="Profile" className="profile-icon" />
+                        </Link>
+                      ) : (
+                        <li className='employer-btn'>
+                          <Link to="/login">Login</Link>
+                        </li>
+                      )}
+                    </li>
                   </ul>
                 </nav>
                 <div className="menu-icon">
