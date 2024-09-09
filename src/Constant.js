@@ -1,4 +1,4 @@
-export const baseURL = 'http://localhost:8000' + '/api/';
+export const baseURL = 'https://horizon-server.onrender.com' + '/api/';
 
 const apiRoutes = {
     user: '/users',
