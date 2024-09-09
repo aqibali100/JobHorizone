@@ -80,6 +80,8 @@
     font-size: 13px;
     margin: 0px;
 }
-.newsletter form input{
+
+.newsletter form input {
     font-size: 12px;
+    padding: 12px;
 }
