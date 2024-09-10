@@ -24,31 +24,37 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
-        email: '',
-        password: '',
+      email: '',
+      password: '',
     },
     validationSchema: LoginSchema,
     onSubmit: async (values, { resetForm, setSubmitting, setErrors }) => {
-        setLoading(true);
-        try {
-            await dispatch(loginUser(values)).unwrap();
-            resetForm();
-            toast.success('Login successful!');
-            navigate('/');
-        } catch (error) {
-            if (error?.message === 'This Email is not Registered!') {
-                toast.error('This Email is not Registered!');
-            } else if (error?.message === 'Your Password is Incorrect!') {
-                toast.error('Your Password is Incorrect!');
-            } else {
-                setErrors({ form: 'Login failed. Please try again.' });
-            }
-        } finally {
-            setLoading(false);
+      setLoading(true);
+      try {
+        const response = await dispatch(loginUser(values)).unwrap();
+        const { user } = response;
+        console.log(user, 'user');
+        resetForm();
+        toast.success('Login successful!');
+        if (user.role === 'employer') {
+          navigate('/employer-dashboard');
+        } else {
+          navigate('/');
         }
+      } catch (error) {
+        if (error?.message === 'This Email is not Registered!') {
+          toast.error('This Email is not Registered!');
+        } else if (error?.message === 'Your Password is Incorrect!') {
+          toast.error('Your Password is Incorrect!');
+        } else {
+          setErrors({ form: 'Login failed. Please try again.' });
+        }
+      } finally {
+        setLoading(false);
+      }
     },
 
-});
+  });
   return (
     <>
       <div class="login-bg">

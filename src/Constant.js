@@ -1,7 +1,8 @@
-export const baseURL = 'https://horizon-server.onrender.com' + '/api/';
+export const baseURL = 'http://localhost:8000' + '/api/';
 
 const apiRoutes = {
     user: '/users',
+    job: '/jobs',
 };
 
 export default apiRoutes;

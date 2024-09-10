@@ -46,6 +46,8 @@ nav ul {
     padding: 0px;
     margin: 0px;
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -160,13 +162,67 @@ nav ul li a.active::after {
 .employer-btn a.active {
     color: white;
 }
-.profile{
-    width: 42px;
+
+.profile {
+    width: 35px;
     border-radius: 50%;
+    position: relative;
 }
-.profile img{
+
+.profile img,
+.model-img img {
     width: 100%;
     border-radius: 50%;
+}
+
+.profile-icon {
+    cursor: pointer;
+}
+
+.model-bg {
+    width: 150px;
+    padding: 15px 10px;
+    position: fixed;
+    top: 83px;
+    right: 23px;
+    background-color: white;
+    z-index: 200;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 7px;
+}
+
+.model ul {
+    margin: 0;
+    padding: 0;
+}
+
+.model ul li {
+    margin-bottom: 10px;
+}
+
+.model ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    transition: all 0.5s ease;
+}
+
+.model ul li a:hover {
+    color: #4440da;
+}
+
+.model .model-svg {
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+.model-img {
+    width: 35px;
+    margin: auto;
+}
+
+.model-title p {
+    font-size: 12px;
 }
 
 @media (max-width: 1009px) {
@@ -175,6 +231,16 @@ nav ul li a.active::after {
     }
 
     nav {
+        display: none;
+    }
+
+    .model-bg {
+        display: none;
+    }
+}
+
+@media (min-width: 1009px) {
+    .mobile-main {
         display: none;
     }
 }

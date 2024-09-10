@@ -2,6 +2,7 @@
     padding: 10px;
     overflow: hidden;
     margin-top: 10px;
+    height: 70vh;
 }
 
 .top-bar {
@@ -27,7 +28,8 @@
 .filter-input {
     width: 100%;
 }
-.table-p p{
+
+.table-p p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +40,7 @@
     width: 100%;
     border: none;
     outline: none;
-    font-size: 17px;
+    font-size: 12px;
     font-family: poppins;
     font-weight: 400;
     color: gray;
@@ -51,13 +53,13 @@
 .post-btn button {
     border: none;
     outline: none;
-    background:  rgba(0, 0, 255, 0.74);
+    background: rgba(0, 0, 255, 0.74);
     padding: 10px;
     border-radius: 5px;
     color: #ffff;
-    font-size: 17px;
+    font-size: 13px;
     font-family: poppins;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .status-wrapper {
@@ -115,15 +117,13 @@
 }
 
 .location-sec span {
-    font-size: 18px;
-    font-family: poppins;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
     color: rgba(0, 0, 255, 0.74);
 }
 
 .location-sec p {
-    font-size: 17px;
-    font-family: poppins;
+    font-size: 11px;
     font-weight: 400;
     color: gray;
 }
@@ -138,13 +138,64 @@
     font-size: 23px;
 }
 
-@media screen and (max-width: 930px) {
+.check-input {
+    cursor: pointer;
+    width: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 49px;
+}
 
+.post-btn {
+    text-align: center;
+}
+
+.model-bg-2 {
+    width: 133px;
+    padding: 0px 15px 10px;
+    position: fixed;
+    top: 227px;
+    right: 77px;
+    background-color: white;
+    z-index: 200;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 930px) {
     .filter-section {
         width: 45%;
     }
-
-
+}
+@media (max-width: 1274px) {
+    .model-bg-2 {
+        position: absolute;
+        top: 281px;
+        right: 132px;
+    }
+}
+@media (max-width: 770px) {
+    .model-bg-2 {
+        position: absolute;
+        top: 317px;
+        right: 64px;
+    }
+}
+@media (max-width: 568px) {
+    .model-bg-2 {
+        position: absolute;
+        top: 321px;
+        right: 17px;
+    }
+}
+@media (max-width: 375px) {
+    .model-bg-2 {
+        position: absolute;
+        top: 352px;
+        right: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {

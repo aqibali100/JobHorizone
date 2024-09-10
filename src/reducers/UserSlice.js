@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import service from '../api/ApiRoutes';
 
 const initialState = {
-  user: null,
+  user: JSON.parse(localStorage.getItem('user')) || null,
   userId: null,
   status: 'idle',
   error: null,
@@ -15,6 +15,7 @@ export const registerUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await service.createUser(userData);
+      localStorage.setItem('user', JSON.stringify(response.data));
       return response.data.userId;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -27,6 +28,7 @@ export const loginUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await service.loginUser(userData);
+      localStorage.setItem('user', JSON.stringify(response.data));
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -82,6 +84,13 @@ export const getUserById = createAsyncThunk(
     }
   }
 );
+// export const logoutUser = createAsyncThunk(
+//   'users/logoutUser',
+//   async (_, thunkAPI) => {
+//     localStorage.removeItem('user');
+//     return null;
+//   }
+// );
 const userSlice = createSlice({
   name: 'users',
   initialState,
@@ -143,7 +152,7 @@ const userSlice = createSlice({
       })
       .addCase(updateUserRole.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.user = action.payload; 
+        state.user = action.payload;
       })
       .addCase(updateUserRole.rejected, (state, action) => {
         state.status = 'failed';

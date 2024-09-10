@@ -7,25 +7,25 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
         <>
-            <div class="footer-bg mt-5 pt-5">
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-4 col-md-6 mb-5">
-                            <div class="footer-logo">
+            <div className="footer-bg mt-5 pt-5">
+                <div className="container">
+                    <div className="row d-flex justify-content-center">
+                        <div className="col-lg-4 col-md-6 mb-5">
+                            <div className="footer-logo">
                                 <Link to='/'><div className="logo-img">
                                     <img src={logo} alt='logo'></img>
                                 </div></Link>
                                 <Link to='/'><p>Job<span>Horizon</span></p></Link>
                             </div>
-                            <div class="footer-text mt-3">
+                            <div className="footer-text mt-3">
                                 <p>Join our community today and take the next step in your career journey<br></br> or grow your team with the best talent.</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 pt-3 text-center mb-5">
-                            <div class="footer-title">
+                        <div className="col-lg-4 col-md-6 pt-3 text-center mb-5">
+                            <div className="footer-title">
                                 <h3>Quick <span>Links</span></h3>
                             </div>
-                            <div class="footer-link mt-4">
+                            <div className="footer-link mt-4">
                                 <ul>
                                     <li><Link to='/'>Home</Link></li>
                                     <li><Link to='/all-jobs'>All Jobs</Link></li>
@@ -36,15 +36,15 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 pt-3 text-center mb-5">
-                            <div class="footer-title">
+                        <div className="col-lg-4 col-md-6 pt-3 text-center mb-5">
+                            <div className="footer-title">
                                 <h3>Newsletter <span>Signup</span></h3>
                             </div>
-                            <div class="newsletter mt-4">
+                            <div className="newsletter mt-4">
                                 <p>Subscribe to receive the latest job updates.</p>
                                 <form>
-                                    <input type="email" placeholder="Your email address"required class="form-control mb-3" />
-                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                    <input type="email" placeholder="Your email address"required className="form-control mb-3" />
+                                    <button type="submit" className="btn btn-primary">Subscribe</button>
                                 </form>
                             </div>
                         </div>

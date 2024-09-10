@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../assets/styles/Home.css'
 import Carousel from 'react-bootstrap/Carousel';
 import sliderImg1 from '../assets/images/testimonial-1-100x100.jpg'
@@ -17,7 +17,15 @@ import walmart from '../assets/images/Walmart.png'
 import dropbox from '../assets/images/Dropbox.png'
 import slack from '../assets/images/Slack.png'
 import dribble from '../assets/images/Dribble.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchJobs } from '../reducers/JobSlice';
+import { formatDistanceToNow } from 'date-fns';
 const Home = () => {
+  const dispatch = useDispatch();
+  const jobs = useSelector((state) => state.jobs.jobs);
+  useEffect(() => {
+    dispatch(fetchJobs());
+  }, [dispatch]);
   return (
     <>
       <div className="hero-bg">
@@ -181,126 +189,33 @@ const Home = () => {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
+            {jobs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 6).map((job) => (
+              <div className="col-lg-4 col-md-6 mb-5" key={job._id}>
+                <div className="job-card">
+                  <div className="job-head">
+                    <div className="job-icon">
+                      <img src={job.image || jobImg} alt="job-icon" />
+                    </div>
+                    <div className="job-title">
+                      <h4 style={{ textTransform: 'capitalize' }}>{job.jobTitle}</h4>
+                    </div>
                   </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
+                  <div className="job-location d-flex justify-content-between">
+                    <div className="location">
+                      <LocationOnIcon />
+                      <span style={{ textTransform: 'capitalize' }}>{job.jobLocation}</span>
+                    </div>
+                    <div className="type">
+                      <p style={{ textTransform: 'capitalize' }}>{job.jobType}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
+                  <div className="job-post-date">
+                  Posted: <p style={{ textTransform: 'capitalize' }}>{formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}</p>
+                    <Link to={`/view-job/${job._id}`} className="job-type p-2">Apply Now</Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
-                  </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
-                  </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
-                  </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
-                  </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
-                  </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
-                  </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
-                  </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
-                  </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="job-card">
-                <div className="job-head">
-                  <div className="job-icon">
-                    <img src={jobImg} alt='job-icon'></img>
-                  </div>
-                  <div className="job-title">
-                    <h4>Web Designer</h4>
-                  </div>
-                </div>
-                <div className="job-location">
-                  <LocationOnIcon />
-                  <span>Lahore</span>
-                </div>
-                <div className="job-post-date">
-                  <p>Posted : 1 day ago</p>
-                  <p className='job-type p-2'>Apply Now</p>
-                </div>
-              </div>
-            </div>
+            ))}
             <div className="more-jobs-btn">
               <Link to='/all-jobs'>
                 <button>View More Jobs</button>
@@ -387,66 +302,66 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div class="company-bg mt-5 pt-5">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="company-text text-center">
+      <div className="company-bg mt-5 pt-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="company-text text-center">
                 <h1>More Than <span>50+ companies</span> sponsorship with us</h1>
               </div>
             </div>
           </div>
-          <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+          <div className="row pt-5">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={airbnb} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={shipBob} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={discord} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={walmart} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={Capitalone} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={dropbox} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={slack} alt='company-img'></img>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-              <div class="company-img">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="company-img">
                 <img src={dribble} alt='company-img'></img>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="callout-bg mt-5">
-        <div class="container">
-          <div class="row">
-            <div class="col d-flex justify-content-end">
-              <div class="callout-text pt-5">
+      <div className="callout-bg mt-5">
+        <div className="container">
+          <div className="row">
+            <div className="col d-flex justify-content-end">
+              <div className="callout-text pt-5">
                 <h1>Make <span>Recruiting</span> Your Competitive Advantage</h1>
-                <p>Talent is a top priority for all startup founders and executives. Jobify offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.</p>
+                <p>Talent is a top priority for all startup founders and executives. JobHorizon offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.</p>
               </div>
             </div>
           </div>

@@ -17,6 +17,8 @@ import { ToastContainer } from 'react-toastify';
 import Jobs from './screens/Jobs';
 import Employ from './screens/Employ';
 import JobPostForm from './screens/JobPostForm';
+import Profile from './screens/Profile';
+import NotFound from './screens/NotFound';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
@@ -36,6 +39,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<Terms />} />
         <Route path="/employer-dashboard" element={<Employ />} />
         <Route path="/job-post-form" element={<JobPostForm />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
       <ToastContainer />

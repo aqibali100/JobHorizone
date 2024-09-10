@@ -206,7 +206,8 @@
 }
 
 .job-post-date p {
-    font-size: 13px;
+    font-size: 10px;
+    margin: 0;
 }
 
 .job-post-date .job-type {
@@ -215,6 +216,7 @@
     font-weight: 600;
     cursor: pointer;
     background-color: #4440da;
+    text-decoration: none;
 }
 
 .more-jobs-btn {

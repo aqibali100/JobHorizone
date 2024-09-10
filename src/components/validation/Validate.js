@@ -67,5 +67,6 @@ export const jobPostSchema = yup.object().shape({
     jobType: yup.string()
         .required('Job Type is required'),
     industry: yup.string()
-        .required('Company industry is required')
+        .required('Company industry is required'),
+    experience: yup.string().required('Experience is required'),
 });
