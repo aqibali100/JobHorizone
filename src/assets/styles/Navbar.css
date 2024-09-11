@@ -95,6 +95,11 @@ nav ul li a.active::after {
     color: #4440da;
 }
 
+.menu-icon svg,
+.navbar-account svg {
+    font-size: 28px;
+}
+
 .close-icon {
     display: flex;
     justify-content: end;
@@ -225,6 +230,16 @@ nav ul li a.active::after {
     font-size: 12px;
 }
 
+.navbar-account {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-left-icons {
+    display: none;
+    align-items: center;
+}
+
 @media (max-width: 1009px) {
     .menu-icon {
         display: block;
@@ -234,8 +249,13 @@ nav ul li a.active::after {
         display: none;
     }
 
-    .model-bg {
-        display: none;
+    .navbar-account {
+        display: block;
+    }
+
+    .navbar-left-icons {
+        display: flex;
+        gap: 10px;
     }
 }
 

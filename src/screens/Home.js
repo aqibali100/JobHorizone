@@ -189,38 +189,54 @@ const Home = () => {
             </div>
           </div>
           <div className="row mt-5">
-            {jobs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 6).map((job) => (
-              <div className="col-lg-4 col-md-6 mb-5" key={job._id}>
-                <div className="job-card">
-                  <div className="job-head">
-                    <div className="job-icon">
-                      <img src={job.image || jobImg} alt="job-icon" />
-                    </div>
-                    <div className="job-title">
-                      <h4 style={{ textTransform: 'capitalize' }}>{job.jobTitle}</h4>
-                    </div>
-                  </div>
-                  <div className="job-location d-flex justify-content-between">
-                    <div className="location">
-                      <LocationOnIcon />
-                      <span style={{ textTransform: 'capitalize' }}>{job.jobLocation}</span>
-                    </div>
-                    <div className="type">
-                      <p style={{ textTransform: 'capitalize' }}>{job.jobType}</p>
-                    </div>
-                  </div>
-                  <div className="job-post-date">
-                  Posted: <p style={{ textTransform: 'capitalize' }}>{formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}</p>
-                    <Link to={`/view-job/${job._id}`} className="job-type p-2">Apply Now</Link>
-                  </div>
-                </div>
+            {jobs.length === 0 ? (
+              <div className="col-12">
+                <p className="no-jobs-message text-center">No Jobs Available</p>
               </div>
-            ))}
-            <div className="more-jobs-btn">
-              <Link to='/all-jobs'>
-                <button>View More Jobs</button>
-              </Link>
-            </div>
+            ) : (
+              <>
+                {jobs
+                  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                  .slice(0, 6)
+                  .map((job) => (
+                    <div className="col-lg-4 col-md-6 mb-5" key={job._id}>
+                      <div className="job-card">
+                        <div className="job-head">
+                          <div className="job-icon">
+                            <img src={job.image || jobImg} alt="job-icon" />
+                          </div>
+                          <div className="job-title">
+                            <h4 style={{ textTransform: 'capitalize' }}>{job.jobTitle}</h4>
+                          </div>
+                        </div>
+                        <div className="job-location d-flex justify-content-between">
+                          <div className="location">
+                            <LocationOnIcon />
+                            <span style={{ textTransform: 'capitalize' }}>{job.jobLocation}</span>
+                          </div>
+                          <div className="type">
+                            <p style={{ textTransform: 'capitalize' }}>{job.jobType}</p>
+                          </div>
+                        </div>
+                        <div className="job-post-date">
+                          Posted:{' '}
+                          <p style={{ textTransform: 'capitalize' }}>
+                            {formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}
+                          </p>
+                          <Link to={`/view-job/${job._id}`} className="job-type p-2">
+                            Apply Now
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                <div className="more-jobs-btn">
+                  <Link to='/all-jobs'>
+                    <button>View More Jobs</button>
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

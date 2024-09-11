@@ -84,13 +84,13 @@ export const getUserById = createAsyncThunk(
     }
   }
 );
-// export const logoutUser = createAsyncThunk(
-//   'users/logoutUser',
-//   async (_, thunkAPI) => {
-//     localStorage.removeItem('user');
-//     return null;
-//   }
-// );
+export const logoutUser = createAsyncThunk(
+  'users/logoutUser',
+  async (_, thunkAPI) => {
+    localStorage.removeItem('user');
+    return null;
+  }
+);
 const userSlice = createSlice({
   name: 'users',
   initialState,
@@ -169,6 +169,10 @@ const userSlice = createSlice({
       .addCase(getUserById.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
+      })
+      .addCase(logoutUser.fulfilled, (state) => {
+        state.user = null;
+        state.userId = null;
       });
   },
 });
