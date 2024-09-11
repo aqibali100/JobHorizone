@@ -138,6 +138,7 @@ nav ul li a.active::after {
     top: 0;
     right: 0;
     background-color: white;
+    background-image: url('../images/particels.png');
     z-index: 100;
     width: 320px;
     padding: 10px 15px;
@@ -146,6 +147,9 @@ nav ul li a.active::after {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .employer-btn {
@@ -189,7 +193,7 @@ nav ul li a.active::after {
     padding: 15px 10px;
     position: fixed;
     top: 83px;
-    right: 23px;
+    right: 5px;
     background-color: white;
     z-index: 200;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

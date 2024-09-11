@@ -20,6 +20,10 @@ import dribble from '../assets/images/Dribble.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchJobs } from '../reducers/JobSlice';
 import { formatDistanceToNow } from 'date-fns';
+import CountUp from 'react-countup';
+import GroupIcon from '@mui/icons-material/Group';
+import SearchIcon from '@mui/icons-material/Search';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 const Home = () => {
   const dispatch = useDispatch();
   const jobs = useSelector((state) => state.jobs.jobs);
@@ -378,6 +382,104 @@ const Home = () => {
               <div className="callout-text pt-5">
                 <h1>Make <span>Recruiting</span> Your Competitive Advantage</h1>
                 <p>Talent is a top priority for all startup founders and executives. JobHorizon offers a way to completely optimize your entire recruiting process. Find better candidates, conduct more focused interviews, and make data-driven hiring decisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="stats-bg mt-5 text-center mb-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="stats-text">
+                <h1>Job<span className='common'>Horizon</span> Site Stats</h1>
+                <p className='mt-3 stats-p'>Here we list our site stats and how many people we’ve helped find a job and companies<br></br> have found recruits. It's a pretty awesome stats area!</p>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-5">
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="stats-card">
+                <h1>
+                  <CountUp end={10} duration={10} suffix="+" />
+                </h1>
+                <p className='common'>Jobs Posted</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="stats-card">
+                <h1>
+                  <CountUp end={0} duration={10} />
+                </h1>
+                <p className='common'>Jobs Filled</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="stats-card">
+                <h1>
+                  <CountUp end={14} duration={10} suffix="+" />
+                </h1>
+                <p className='common'>Companies</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-5">
+              <div className="stats-card">
+                <h1>
+                  <CountUp end={2085} duration={10} suffix="+" />
+                </h1>
+                <p className='common'>Members</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="process-bg mt-5 pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="process-heading text-center">
+                <h2>Our Job<span className='common'> Process</span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 d-flex justify-content-center pt-3">
+            <div class="col-lg-4 col-md-6 mb-5">
+              <div class="process-card">
+                <div class="card-icon text-center mt-2">
+                  <GroupIcon />
+                </div>
+                <div class="card-heading">
+                  <h5>Create Account</h5>
+                </div>
+                <div class="card-text">
+                  <p>Sign up to start your journey. Create a personalized profile that highlights your skills and experience to attract potential employers.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+              <div class="process-card">
+                <div class="card-icon text-center mt-2">
+                  <SearchIcon />
+                </div>
+                <div class="card-heading">
+                  <h5>Search Job</h5>
+                </div>
+                <div class="card-text">
+                  <p>Explore a wide range job opportunities that match your skills and interests. Use advanced search filters to find perfect job for you.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+              <div class="process-card">
+                <div class="card-icon text-center mt-2">
+                  <InsertDriveFileIcon />
+                </div>
+                <div class="card-heading">
+                  <h5>Upload Resume</h5>
+                </div>
+                <div class="card-text">
+                  <p>Enhance your chances of getting noticed by uploading your resume. Our platform allows you  easily update and manage.</p>
+                </div>
               </div>
             </div>
           </div>

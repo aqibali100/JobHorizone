@@ -65,28 +65,31 @@ const Navbar = () => {
             <div className="col">
               <div className="header-flex">
                 <div className="logo">
-                  <Link to='/'><div className="logo-img">
-                    <img src={logo} alt='logo'></img>
-                  </div></Link>
-                  <Link to='/'><p>Job<span>Horizon</span></p></Link>
+                  {
+                    isAuthenticated && isAuthenticated.user?.role === 'employer' ? (
+                      <><Link to='/employer-dashboard'><div className="logo-img"><img src={logo} alt='logo' /></div></Link><Link to='/employer-dashboard'><p>Job<span>Horizon</span></p></Link></>
+                    ) : (
+                      <><Link to='/'><div className="logo-img"><img src={logo} alt='logo' /></div></Link><Link to='/'><p>Job<span>Horizon</span></p></Link></>
+                    )
+                  }
                 </div>
                 <nav>
                   <ul>
-                   {
-                    isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
-                      ''
-                    ) : (
-                      <li><NavLink to="/" className={location.pathname === '/' ? 'active' : ''}>Home</NavLink></li>
-                    )
-                   }
+                    {
+                      isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
+                        <li><NavLink to="/employer-dashboard" className={location.pathname === '/employer-dashboard' ? 'active' : ''}>Home</NavLink></li>
+                      ) : (
+                        <li><NavLink to="/" className={location.pathname === '/' ? 'active' : ''}>Home</NavLink></li>
+                      )
+                    }
                     <li><NavLink to="/about-us" className={location.pathname === '/about-us' ? 'active' : ''}>About</NavLink></li>
                     {
-                    isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
-                      ''
-                    ) : (
-                      <li><NavLink to="/all-jobs" className={location.pathname === '/all-jobs' ? 'active' : ''}>All Jobs</NavLink></li>
-                    )
-                   }
+                      isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
+                        ''
+                      ) : (
+                        <li><NavLink to="/all-jobs" className={location.pathname === '/all-jobs' ? 'active' : ''}>All Jobs</NavLink></li>
+                      )
+                    }
                     <li><NavLink to="/privacy-policy" className={location.pathname === '/privacy-policy' ? 'active' : ''}>Privacy Policy</NavLink></li>
                     <li><NavLink to="/terms-and-conditions" className={location.pathname === '/terms-and-conditions' ? 'active' : ''}>Terms & Conditions</NavLink></li>
                     <li><NavLink to="/contact-us" className={location.pathname === '/contact-us' ? 'active' : ''}>Contact</NavLink></li>
@@ -101,7 +104,7 @@ const Navbar = () => {
                     )}
                   </ul>
                 </nav>
-                <div class="navbar-left-icons">
+                <div className="navbar-left-icons">
                   {
                     isAuthenticated ? (
                       <div className='profile' onClick={handleClickOpen} >
@@ -126,10 +129,22 @@ const Navbar = () => {
               <CloseIcon onClick={handleCloseNav} />
             </div>
             <nav className='mobile-navbar'>
-              <Link to='/' onClick={handleLinkClick}>Home</Link>
+              {
+                isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
+                  <li><NavLink to="/employer-dashboard" onClick={handleLinkClick} className={location.pathname === '/employer-dashboard' ? 'active' : ''}>Home</NavLink></li>
+                ) : (
+                  <li><NavLink to="/" onClick={handleLinkClick} className={location.pathname === '/' ? 'active' : ''}>Home</NavLink></li>
+                )
+              }
               <Link to='/about-us' onClick={handleLinkClick}>About</Link>
               <Link to='/contact-us' onClick={handleLinkClick}>Contact</Link>
-              <Link to='/all-jobs' onClick={handleLinkClick}>All Jobs</Link>
+              {
+                isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
+                  ''
+                ) : (
+                  <li><NavLink to="/all-jobs" onClick={handleLinkClick} className={location.pathname === '/all-jobs' ? 'active' : ''}>All Jobs</NavLink></li>
+                )
+              }
               <Link to='/privacy-policy' onClick={handleLinkClick}>Privacy Policy</Link>
               <Link to='/terms-and-conditions' onClick={handleLinkClick}>Terms & Conditions</Link>
               {!isAuthenticated ? (
@@ -159,7 +174,7 @@ const Navbar = () => {
                   <Link to="/profile" onClick={handleClickModel}> <AccountCircleOutlinedIcon className='model-svg' /> Profile</Link>
                 </li>
                 <li>
-                  <Link  onClick={handleLogout}><LoginOutlinedIcon className='model-svg' /> Logout</Link>
+                  <Link onClick={handleLogout}><LoginOutlinedIcon className='model-svg' /> Logout</Link>
                 </li>
               </ul>
             </div>

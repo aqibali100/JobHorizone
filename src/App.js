@@ -19,6 +19,7 @@ import Employ from './screens/Employ';
 import JobPostForm from './screens/JobPostForm';
 import Profile from './screens/Profile';
 import NotFound from './screens/NotFound';
+import ProtectedRoute from './components/ProtectedRoutes'
 
 function App() {
   return (
@@ -37,9 +38,30 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
-        <Route path="/employer-dashboard" element={<Employ />} />
-        <Route path="/job-post-form" element={<JobPostForm />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/employer-dashboard"
+          element={
+            <ProtectedRoute requiredRole="employer">
+              <Employ />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/job-post-form"
+          element={
+            <ProtectedRoute requiredRole="employer">
+              <JobPostForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
       <Footer />
       <ToastContainer />

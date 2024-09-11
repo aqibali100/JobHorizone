@@ -2,9 +2,13 @@ import React from 'react';
 import '../../assets/styles/Footer.css';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
+import { useSelector } from 'react-redux';
+
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const isAuthenticated = useSelector((state) => state.users.user);
+
     return (
         <>
             <div className="footer-bg mt-5 pt-5">
@@ -27,13 +31,18 @@ const Footer = () => {
                             </div>
                             <div className="footer-link mt-4">
                                 <ul>
-                                    <li><Link to='/'>Home</Link></li>
-                                    <li><Link to='/all-jobs'>All Jobs</Link></li>
+                                    {!(isAuthenticated && isAuthenticated.user?.role === 'employer') && (
+                                        <>
+                                            <li><Link to='/'>Home</Link></li>
+                                            <li><Link to='/all-jobs'>All Jobs</Link></li>
+                                        </>
+                                    )}
                                     <li><Link to='/about-us'>About Us</Link></li>
                                     <li><Link to='/contact-us'>Contact Us</Link></li>
                                     <li><Link to='/privacy-policy'>Privacy Policy</Link></li>
                                     <li><Link to='/terms-and-conditions'>Terms and Conditions</Link></li>
                                 </ul>
+
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 pt-3 text-center mb-5">
@@ -43,7 +52,7 @@ const Footer = () => {
                             <div className="newsletter mt-4">
                                 <p>Subscribe to receive the latest job updates.</p>
                                 <form>
-                                    <input type="email" placeholder="Your email address"required className="form-control mb-3" />
+                                    <input type="email" placeholder="Your email address" required className="form-control mb-3" />
                                     <button type="submit" className="btn btn-primary">Subscribe</button>
                                 </form>
                             </div>

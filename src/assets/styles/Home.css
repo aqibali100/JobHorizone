@@ -217,6 +217,7 @@
     cursor: pointer;
     background-color: #4440da;
     text-decoration: none;
+    font-size: 11px;
 }
 
 .more-jobs-btn {
@@ -255,7 +256,8 @@
 .company-img img {
     width: 100%;
 }
-.callout-bg{
+
+.callout-bg {
     background-image: url('../images/hero.jpg');
     background-size: cover;
     height: 60vh;
@@ -264,6 +266,7 @@
     position: relative;
     background-attachment: fixed;
 }
+
 .callout-bg::before {
     content: "";
     position: absolute;
@@ -274,12 +277,80 @@
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
-.callout-text{
+
+.callout-text {
     width: 480px;
     position: relative;
     width: 480px;
     color: #fff;
-    z-index: 2; 
+    z-index: 2;
+}
+
+.common {
+    color: #4440da;
+    font-weight: 600;
+}
+
+.stats-card {
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-image: url('../images/stats.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.stats-card h1 {
+    font-size: 30px;
+    margin-top: 17px;
+}
+
+.stats-text h1 {
+    font-size: 30px;
+}
+
+.stats-p {
+    font-size: 14px;
+}
+
+.process-card {
+    padding: 15px 23px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.process-card:hover {
+    transform: scale(1.05);
+}
+
+.card-icon {
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon svg {
+    font-size: 35px;
+}
+
+.card-heading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-heading h5 {
+    color: #4440da;
+}
+
+.card-text {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.card-text p {
+    margin-bottom: 15px;
 }
 
 @media (max-width: 1009px) {
