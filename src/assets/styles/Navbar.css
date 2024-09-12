@@ -95,9 +95,8 @@ nav ul li a.active::after {
     color: #4440da;
 }
 
-.menu-icon svg,
-.navbar-account svg {
-    font-size: 28px;
+.menu-icon svg {
+    font-size: 35px;
 }
 
 .close-icon {
@@ -244,6 +243,10 @@ nav ul li a.active::after {
     align-items: center;
 }
 
+.chat {
+    margin-right: 20px;
+}
+
 @media (max-width: 1009px) {
     .menu-icon {
         display: block;
@@ -259,13 +262,35 @@ nav ul li a.active::after {
 
     .navbar-left-icons {
         display: flex;
-        gap: 10px;
+        gap: 3px;
+    }
+
+    .navbar-left-icons svg {
+        font-size: 23px;
     }
 }
 
 @media (min-width: 1009px) {
     .mobile-main {
         display: none;
+    }
+}
+
+@media (max-width: 582px) {
+    .logo-img {
+        width: 67px;
+    }
+
+    .logo p {
+        font-size: 15px;
+    }
+
+    .profile {
+        width: 25px;
+    }
+
+    .chat {
+        margin-right: 4px;
     }
 }
 

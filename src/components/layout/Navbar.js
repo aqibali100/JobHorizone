@@ -11,6 +11,8 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from '@mui/material';
 import { logoutUser } from '../../reducers/UserSlice';
+import ChatIcon from '@mui/icons-material/Chat';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const Navbar = () => {
   const location = useLocation();
@@ -94,6 +96,18 @@ const Navbar = () => {
                     <li><NavLink to="/terms-and-conditions" className={location.pathname === '/terms-and-conditions' ? 'active' : ''}>Terms & Conditions</NavLink></li>
                     <li><NavLink to="/contact-us" className={location.pathname === '/contact-us' ? 'active' : ''}>Contact</NavLink></li>
                     {isAuthenticated ? (
+                      <>
+                        <div className='chat' >
+                          <Link to='/chat-dashboard'><ChatIcon /></Link>
+                        </div>
+                        <div className='notification' >
+                          <Link to='/'><NotificationsIcon /></Link>
+                        </div>
+                      </>
+                    ) : (
+                      ''
+                    )}
+                    {isAuthenticated ? (
                       <div className='profile' onClick={handleClickOpen} >
                         <img src={defaultImg} alt="Profile" className="profile-icon" />
                       </div>
@@ -105,6 +119,18 @@ const Navbar = () => {
                   </ul>
                 </nav>
                 <div className="navbar-left-icons">
+                  {isAuthenticated ? (
+                    <>
+                      <div className='chat' >
+                        <Link to='/chat-dashboard'><ChatIcon /></Link>
+                      </div>
+                      <div className='notification' >
+                        <Link to='/'><NotificationsIcon /></Link>
+                      </div>
+                    </>
+                  ) : (
+                    ''
+                  )}
                   {
                     isAuthenticated ? (
                       <div className='profile' onClick={handleClickOpen} >
