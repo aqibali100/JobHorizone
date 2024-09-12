@@ -175,6 +175,7 @@ nav ul li a.active::after {
     width: 35px;
     border-radius: 50%;
     position: relative;
+    margin-right: 5px;
 }
 
 .profile img,
@@ -243,7 +244,8 @@ nav ul li a.active::after {
     align-items: center;
 }
 
-.chat {
+.chat,
+.notification {
     margin-right: 20px;
 }
 
@@ -289,7 +291,8 @@ nav ul li a.active::after {
         width: 25px;
     }
 
-    .chat {
+    .chat,
+    .notification {
         margin-right: 4px;
     }
 }

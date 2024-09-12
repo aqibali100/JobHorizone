@@ -4,6 +4,7 @@ import { EmojiEmotions, AttachFile, Image, Send } from '@mui/icons-material';
 import EmojiPicker from 'emoji-picker-react';
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Chat = () => {
     const [showPicker, setShowPicker] = useState(false);
@@ -14,7 +15,6 @@ const Chat = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const fileInputRef = useRef(null);
     const imageInputRef = useRef(null);
-    const [hideDiv, setHideDiv] = useState(false);
 
     const handleEmojiClick = (event, emojiObject) => {
         setMessage(prevMessage => prevMessage + emojiObject.emoji);
@@ -91,7 +91,7 @@ const Chat = () => {
                                 className={`contact-item ${selectedContact === contact.id ? 'active' : ''}`}
                                 onClick={() => {
                                     setSelectedContact(contact.id);
-                                    setOpenChat(true);             
+                                    setOpenChat(true);
                                 }}
                             >
                                 <div className="contact">
@@ -109,76 +109,75 @@ const Chat = () => {
                     )}
                 </div>
                 <div className="chat-section">
-                    <div className="chat-topbar">
-                        <div className="back-btn">
-
-                        </div>
-                        <div className="chat-user">
-                            <img src="https://via.placeholder.com/50x50" alt="Contact" />
-                        </div>
-                        <div className="chat-user-name">
-                            <p>{contacts?.find(contact => contact.id === selectedContact)?.name}</p>
-                        </div>
-                    </div>
                     {selectedContact ? (
-                        <div className="message-area">
-                            <div className="messages">
-                                {messages[selectedContact].map((message, index) => (
-                                    <div
-                                        key={index}
-                                        className={`message ${message.from === 'me' ? 'from-me' : 'from-them'}`}
-                                    >
-                                        {message.text}
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="message-input">
-                                <div className="input-container">
-                                    <input
-                                        type="text"
-                                        value={message || selectedImage}
-                                        onChange={(e) => setMessage(e.target.value)}
-                                        placeholder="Type a message"
-                                    />
-                                    <div className="input-icons">
-                                        <EmojiEmotions
-                                            className="icon"
-                                            onClick={() => setShowPicker(prev => !prev)}
-                                        />
-                                        <AttachFile
-                                            className="icon"
-                                            onClick={handleFileClick}
-                                        />
-                                        <Image
-                                            className="icon"
-                                            onClick={handleImageClick}
-                                        />
-                                        <button className="send-button">
-                                            <Send />
-                                        </button>
-                                    </div>
-                                    {showPicker && (
-                                        <div className="emoji-picker">
-                                            <EmojiPicker onEmojiClick={handleEmojiClick} />
-                                        </div>
-                                    )}
-                                    <input
-                                        type="file"
-                                        ref={fileInputRef}
-                                        style={{ display: 'none' }}
-                                        onChange={handleFileChange}
-                                        multiple
-                                    />
-                                    <input
-                                        type="file"
-                                        ref={imageInputRef}
-                                        style={{ display: 'none' }}
-                                        accept="image/*"
-                                        onChange={handleImageChange}
-                                    />
+                        <>
+                            <div className="chat-topbar">
+                                <div className="chat-user">
+                                    <img src="https://via.placeholder.com/50x50" alt="Contact" />
+                                </div>
+                                <div className="chat-user-name">
+                                    <p>{contacts?.find(contact => contact.id === selectedContact)?.name}</p>
                                 </div>
                             </div>
-                        </div>
+                            <div className="message-area">
+                                <div className="messages">
+                                    {messages[selectedContact].map((message, index) => (
+                                        <div
+                                            key={index}
+                                            className={`message ${message.from === 'me' ? 'from-me' : 'from-them'}`}
+                                        >
+                                            {message.text}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="message-input">
+                                    <div className="input-container">
+                                        <input
+                                            type="text"
+                                            value={message || selectedImage}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                            placeholder="Type a message"
+                                        />
+                                        <div className="input-icons">
+                                            <EmojiEmotions
+                                                className="icon"
+                                                onClick={() => setShowPicker(prev => !prev)}
+                                            />
+                                            <AttachFile
+                                                className="icon"
+                                                onClick={handleFileClick}
+                                            />
+                                            <Image
+                                                className="icon"
+                                                onClick={handleImageClick}
+                                            />
+                                            <button className="send-button">
+                                                <Send />
+                                            </button>
+                                        </div>
+                                        {showPicker && (
+                                            <div className="emoji-picker">
+                                                <EmojiPicker onEmojiClick={handleEmojiClick} />
+                                            </div>
+                                        )}
+                                        <input
+                                            type="file"
+                                            ref={fileInputRef}
+                                            style={{ display: 'none' }}
+                                            onChange={handleFileChange}
+                                            multiple
+                                        />
+                                        <input
+                                            type="file"
+                                            ref={imageInputRef}
+                                            style={{ display: 'none' }}
+                                            accept="image/*"
+                                            onChange={handleImageChange}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </>
                     ) : (
                         <div className="no-chat">
                             <h3>Select a contact to start chatting</h3>
@@ -191,7 +190,7 @@ const Chat = () => {
                 <div className="chat-section-2">
                     <div className="chat-topbar">
                         <div className="back-btn">
-
+                            <ArrowBackIcon onClick={() => setOpenChat(false)} />
                         </div>
                         <div className="chat-user">
                             <img src="https://via.placeholder.com/50x50" alt="Contact" />

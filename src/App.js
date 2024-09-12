@@ -21,6 +21,7 @@ import Profile from './screens/Profile';
 import NotFound from './screens/NotFound';
 import ProtectedRoute from './components/ProtectedRoutes'
 import Chat from './screens/Chat';
+import ViewJob from './screens/ViewJob';
 
 function App() {
   return (
@@ -63,11 +64,19 @@ function App() {
             </ProtectedRoute>
           }
         />
-          <Route
+        <Route
           path="/chat-dashboard"
           element={
             <ProtectedRoute>
               <Chat />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/view-job/:jobId"
+          element={
+            <ProtectedRoute>
+              <ViewJob />
             </ProtectedRoute>
           }
         />
