@@ -85,7 +85,7 @@ input {
   font-weight: 400;
   padding: 0 5px;
 }
-
+.input-field
 input:focus+label,
 input:not(:placeholder-shown)+label {
   top: -22px;
@@ -94,6 +94,9 @@ input:not(:placeholder-shown)+label {
   font-family: poppins;
   font-weight: 400;
   color: #4040da;
+}
+.input-field-2 label{
+  font-size: 13px;
 }
 
 .industry {

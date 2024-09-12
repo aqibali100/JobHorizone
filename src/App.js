@@ -22,6 +22,7 @@ import NotFound from './screens/NotFound';
 import ProtectedRoute from './components/ProtectedRoutes'
 import Chat from './screens/Chat';
 import ViewJob from './screens/ViewJob';
+import Application from './screens/Application';
 
 function App() {
   return (
@@ -77,6 +78,14 @@ function App() {
           element={
             <ProtectedRoute>
               <ViewJob />
+            </ProtectedRoute>
+          }
+        />
+           <Route
+          path="/application-form/:jobId"
+          element={
+            <ProtectedRoute>
+              <Application />
             </ProtectedRoute>
           }
         />

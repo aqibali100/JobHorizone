@@ -228,7 +228,7 @@ const Home = () => {
                             {formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}
                           </p>
                           <Link to={`/view-job/${job._id}`} className="job-type p-2">
-                            Apply Now
+                            View Job
                           </Link>
                         </div>
                       </div>

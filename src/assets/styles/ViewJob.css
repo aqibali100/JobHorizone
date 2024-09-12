@@ -1,53 +1,47 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.card {
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
+.card-content {
+    padding: 2rem;
+}
+
+.box-center {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.job-field {
-    margin-bottom: 1.5rem;
-}
-
-.job-label {
-    font-size: 1.1rem;
-    color: #555;
+.typography-title {
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
-.job-field div {
+.typography-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.grid-item {
+    padding: 0.5rem;
+}
+
+.divider {
+    margin: 1.5rem 0;
+}
+
+.typography-body {
     font-size: 1rem;
     color: #333;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    border-radius: 4px;
 }
 
-.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+.typography-bold {
+    font-weight: 600;
 }
 
-.col-md-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.typography-description {
+    font-size: 1rem;
+    color: #666;
 }

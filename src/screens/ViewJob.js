@@ -1,105 +1,85 @@
-import React from 'react';
-import '../assets/styles/JobPost.css';
-import 'react-quill/dist/quill.snow.css';
+import React, { useEffect } from 'react';
+import { Container, Grid, Card, CardContent, Typography, Divider, Box, Button } from '@mui/material';
+import '../assets/styles/ViewJob.css';
+import { Link, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchJobById } from '../reducers/JobSlice';
 
 const ViewJob = () => {
+    const jobId = useParams();
+    const dispatch = useDispatch();
+    const job = useSelector((state) => state.jobs.job);
+    console.log(job)
+    useEffect(() => {
+        if (jobId) {
+          dispatch(fetchJobById(jobId));
+        }
+      }, [dispatch, jobId]);
     return (
-        <>
-            <div className='topbar mt-4'>
-                <h1>Job Details</h1>
-            </div>
-            <div className='bg-image'>
-                <div className='main'>
-                    <div className='container'>
-                        <form className='job-form'>
-                            <div className='row'>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='firstName' placeholder=''readonly />
-                                        <label>First Name</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field'>
-                                        <input type='text' name='lastName' placeholder=' 'readonly />
-                                        <label>Last Name</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='companyName' placeholder=' ' readonly/>
-                                        <label>Company Name</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='companyName' placeholder=' 'readonly />
-                                        <label>Company Name</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='number' name='numberOfMembers' placeholder=' ' readonly/>
-                                        <label>No. of Company Members</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='number' name='companyPhoneNumber' placeholder=' ' readonly/>
-                                        <label>Company Phone Number</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' 'readonly />
-                                        <label>Job Title</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' 'readonly />
-                                        <label>Job Title</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' 'readonly />
-                                        <label>Job Title</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' ' readonly/>
-                                        <label>Job Title</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='number' name='minimumPay' placeholder=' 'readonly/>
-                                        <label>Minimum Pay</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='number' name='maximumPay' placeholder=' 'readonly/>
-                                        <label>Maximum Pay</label>
-                                    </div>
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' ' readonly/>
-                                        <label>Job Title</label>
-                                    </div>
-                                </div>
-                                <div className="form-btn">
-                                    <button type='submit'>Apply Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </>
+        <Container className="container" maxWidth="md">
+            <Card className="card">
+                <CardContent className="card-content">
+                    <Box className="box-center">
+                        <Typography className="typography-title" variant="h4" gutterBottom>
+                            {job?.jobTitle}
+                        </Typography>
+                        <Typography className="typography-subtitle" variant="h6" color="textSecondary">
+                            {job?.companyName}
+                        </Typography>
+                    </Box>
+
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={6} className="grid-item">
+                            <Typography className="typography-body"><span className="typography-bold">Employer Name:</span> {job?.user?.name}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Employer Email:</span> {job?.user?.email}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Phone Number:</span> {job?.companyPhoneNumber}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Job Type:</span> {job?.jobType}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Industry:</span> {job?.industry}</Typography>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} className="grid-item">
+                            <Typography className="typography-body"><span className="typography-bold">Location:</span> {job?.jobLocation}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Experience:</span> {job?.experience}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Rate:</span> {job?.rate}</Typography>
+                            <Typography className="typography-body"><span className="typography-bold">Members:</span> {job?.numberOfMembers}</Typography>
+                        </Grid>
+                    </Grid>
+
+                    <Divider className="divider" />
+
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={6}>
+                            <Typography className="typography-body"><span className="typography-bold">Minimum Pay:</span> {job?.minimumPay + ' PKR'}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <Typography className="typography-body"><span className="typography-bold">Maximum Pay:</span> {job?.maximumPay + ' PKR'}</Typography>
+                        </Grid>
+                    </Grid>
+
+                    <Divider className="divider" />
+
+                    <Box>
+                        <Typography variant="h6" gutterBottom>
+                            Job Description
+                        </Typography>
+                        <Typography className="typography-description" variant="body1" color="textSecondary">
+                            {job?.jobDescription}
+                        </Typography>
+                    </Box>
+
+                    <Box display="flex" justifyContent="center" mt={3}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            component={Link}
+                            to={`/application-form/${job?._id}`}
+                        >
+                            Apply Now
+                        </Button>
+                    </Box>
+                </CardContent>
+            </Card>
+        </Container>
     );
 };
 
