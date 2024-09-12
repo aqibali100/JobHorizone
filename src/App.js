@@ -20,6 +20,7 @@ import JobPostForm from './screens/JobPostForm';
 import Profile from './screens/Profile';
 import NotFound from './screens/NotFound';
 import ProtectedRoute from './components/ProtectedRoutes'
+import Chat from './screens/Chat';
 
 function App() {
   return (
@@ -59,6 +60,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Profile />
+            </ProtectedRoute>
+          }
+        />
+          <Route
+          path="/chat-dashboard"
+          element={
+            <ProtectedRoute>
+              <Chat />
             </ProtectedRoute>
           }
         />
