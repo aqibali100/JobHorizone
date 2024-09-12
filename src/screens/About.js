@@ -9,9 +9,7 @@ import dropbox from '../assets/images/Dropbox.png'
 import slack from '../assets/images/Slack.png'
 import dribble from '../assets/images/Dribble.png'
 import achieveImg from '../assets/images/women.png'
-import GroupIcon from '@mui/icons-material/Group';
-import SearchIcon from '@mui/icons-material/Search';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import { Verified, Business, AttachMoney, Public } from '@mui/icons-material';
 
 const About = () => {
     return (
@@ -111,56 +109,59 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-5 d-flex justify-content-center pt-3">
-                        <div class="col-lg-3 col-md-6 mb-5">
-                            <div class="process-card">
-                                <div class="card-icon text-center mt-2">
-                                    <GroupIcon />
+                    <div className="row mt-5 d-flex justify-content-center pt-3">
+                        <div className="col-lg-3 col-md-6 mb-5">
+                            <div className="process-card">
+                                <div className="card-icon text-center mt-2">
+                                    <Verified style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
-                                <div class="card-heading">
+                                <div className="card-heading">
                                     <h5>Trusted Quality</h5>
                                 </div>
-                                <div class="card-text">
-                                    <p>Sign up to start your journey. Create a personalized profile that highlights your skills and experience to attract potential employers.</p>
+                                <div className="card-text">
+                                    <p>Join our platform to showcase your skills with a trusted and quality-driven job search experience.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-5">
-                            <div class="process-card">
-                                <div class="card-icon text-center mt-2">
-                                    <SearchIcon />
+
+                        <div className="col-lg-3 col-md-6 mb-5">
+                            <div className="process-card">
+                                <div className="card-icon text-center mt-2">
+                                    <Business style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
-                                <div class="card-heading">
+                                <div className="card-heading">
                                     <h5>Top Companies</h5>
                                 </div>
-                                <div class="card-text">
-                                    <p>Explore a wide range job opportunities that match your skills and interests. Use advanced search filters to find perfect job for you.</p>
+                                <div className="card-text">
+                                    <p>Connect with top companies worldwide offering jobs that match your qualifications and career goals.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-5">
-                            <div class="process-card">
-                                <div class="card-icon text-center mt-2">
-                                    <InsertDriveFileIcon />
+
+                        <div className="col-lg-3 col-md-6 mb-5">
+                            <div className="process-card">
+                                <div className="card-icon text-center mt-2">
+                                    <AttachMoney style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
-                                <div class="card-heading">
+                                <div className="card-heading">
                                     <h5>No Extra Charges</h5>
                                 </div>
-                                <div class="card-text">
-                                    <p>Enhance your chances of getting noticed by uploading your resume. Our platform allows you  easily update and manage.</p>
+                                <div className="card-text">
+                                    <p>Our platform is completely free to use for both job seekers and employers. No hidden costs or additional fees involved!</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-5">
-                            <div class="process-card">
-                                <div class="card-icon text-center mt-2">
-                                    <InsertDriveFileIcon />
+
+                        <div className="col-lg-3 col-md-6 mb-5">
+                            <div className="process-card">
+                                <div className="card-icon text-center mt-2">
+                                    <Public style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
-                                <div class="card-heading">
-                                    <h5>Internation Job</h5>
+                                <div className="card-heading">
+                                    <h5>International Jobs</h5>
                                 </div>
-                                <div class="card-text">
-                                    <p>Enhance your chances of getting noticed by uploading your resume. Our platform allows you  easily update and manage.</p>
+                                <div className="card-text">
+                                    <p>Explore international job opportunities and apply for positions that fit your skills and location preferences.</p>
                                 </div>
                             </div>
                         </div>
