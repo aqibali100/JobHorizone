@@ -1,49 +1,51 @@
 import React, { useEffect } from 'react';
 import '../assets/styles/JobPost.css';
-import { jobPostSchema } from '../components/validation/Validate';
+import { ApplicationSchema } from '../components/validation/Validate';
 import { useFormik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { createJob, fetchJobById } from '../reducers/JobSlice';
+import { fetchJobById } from '../reducers/JobSlice';
 import { toast } from 'react-toastify';
 import 'react-quill/dist/quill.snow.css';
 import { useParams } from 'react-router-dom';
+import { postApplication } from '../reducers/ApplicationSlice';
 
 const Application = () => {
     const jobId = useParams();
     const dispatch = useDispatch();
     const job = useSelector((state) => state.jobs.job);
+    const { user } = useSelector((state) => state.users);
+    console.log(user)
     useEffect(() => {
         if (jobId) {
             dispatch(fetchJobById(jobId));
         }
     }, [dispatch, jobId]);
-    const { user } = useSelector((state) => state.users);
     const formik = useFormik({
         initialValues: {
+            jobTitle: '',
+            companyName: '',
             firstName: '',
             lastName: '',
-            jobTitle: '',
             Phone: '',
-            companyPhoneNumber: '',
-            maximumPay: '',
+            currentSalary: '',
             Email: '',
-            minimumPay: '',
-            rate: '',
-            jobLocation: '',
-            jobDescription: '',
-            jobType: '',
+            expectedSalary: '',
+            Location: '',
             experience: '',
         },
-        validationSchema: jobPostSchema,
+        validationSchema: ApplicationSchema,
         onSubmit: async (values, { resetForm, setSubmitting, setErrors }) => {
             try {
-                const jobData = {
+                const applicationData = {
                     ...values,
-                    userId: user._id
+                    jobTitle: job?.jobTitle,
+                    companyName: job?.companyName,
+                    jobId: jobId,
+                    userId: user?.user?.id
                 };
-                dispatch(createJob({ jobData, config: { headers: { Authorization: `Bearer ${user.token}` } } }));
+                await dispatch(postApplication({ applicationData, config: { headers: { Authorization: `Bearer ${user.token}` } } }));
                 resetForm();
-                toast.success('Job posted successfully!');
+                toast.success('Application submitted successfully!');
             } catch (error) {
                 setErrors({ submit: error.message });
             } finally {
@@ -66,13 +68,13 @@ const Application = () => {
                             <div className='row'>
                                 <div className='col-lg-4 col-md-6'>
                                     <div className='input-field-2 mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' ' readOnly/>
+                                        <input type='text' name='jobTitle' placeholder=' ' value={job?.jobTitle} readOnly />
                                         <label>Job Title</label>
                                     </div>
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
                                     <div className='input-field-2 mt-5'>
-                                        <input type='text' name='companyName' placeholder=' ' readOnly />
+                                        <input type='text' name='companyName' placeholder=' ' value={job?.companyName} readOnly />
                                         <label>Company Name</label>
                                     </div>
                                 </div>
@@ -111,7 +113,7 @@ const Application = () => {
                                     ) : null}
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field-2 mt-5'>
+                                    <div className='input-field mt-5'>
                                         <input type='number' name='Phone' placeholder=' '
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
@@ -123,61 +125,15 @@ const Application = () => {
                                     ) : null}
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='number' name='companyPhoneNumber' placeholder=' '
-                                            onChange={formik.handleChange}
-                                            onBlur={formik.handleBlur}
-                                            value={formik.values.companyPhoneNumber} />
-                                        <label>Company Phone Number</label>
-                                    </div>
-                                    {formik.touched.companyPhoneNumber && formik.errors.companyPhoneNumber ? (
-                                        <div className="post-error">{formik.errors.companyPhoneNumber}</div>
-                                    ) : null}
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='input-field mt-5'>
-                                        <input type='text' name='jobTitle' placeholder=' '
-                                            onChange={formik.handleChange}
-                                            onBlur={formik.handleBlur}
-                                            value={formik.values.jobTitle} />
-                                        <label>Job Title</label>
-                                    </div>
-                                    {formik.touched.jobTitle && formik.errors.jobTitle ? (
-                                        <div className="post-error">{formik.errors.jobTitle}</div>
-                                    ) : null}
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
                                     <div className='industry mt-5'>
                                         <select
-                                            name="jobType"
+                                            name="Location"
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
-                                            value={formik.values.jobType}
+                                            value={formik.values.Location}
                                             defaultValue=""
                                         >
-                                            <option value="" disabled>Select Job Type</option>
-                                            <option value="full-time">Full-Time</option>
-                                            <option value="part-time">Part-Time</option>
-                                            <option value="temporary">Temporary</option>
-                                            <option value="contract">Contract</option>
-                                            <option value="internship">Internship</option>
-                                            <option value="fresher">Fresher</option>
-                                        </select>
-                                    </div>
-                                    {formik.touched.jobType && formik.errors.jobType ? (
-                                        <div className="post-error">{formik.errors.jobType}</div>
-                                    ) : null}
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='industry mt-5'>
-                                        <select
-                                            name="jobLocation"
-                                            onChange={formik.handleChange}
-                                            onBlur={formik.handleBlur}
-                                            value={formik.values.jobLocation}
-                                            defaultValue=""
-                                        >
-                                            <option value="" disabled>Select Job Location</option>
+                                            <option value="" disabled>Your Location</option>
                                             <option value="lahore">Lahore</option>
                                             <option value="faisalabad">Faisalabad</option>
                                             <option value="karachi">Karachi</option>
@@ -187,8 +143,8 @@ const Application = () => {
                                             <option value="bahawalpur">Bahawalpur</option>
                                         </select>
                                     </div>
-                                    {formik.touched.jobLocation && formik.errors.jobLocation ? (
-                                        <div className="post-error">{formik.errors.jobLocation}</div>
+                                    {formik.touched.Location && formik.errors.Location ? (
+                                        <div className="post-error">{formik.errors.Location}</div>
                                     ) : null}
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
@@ -212,46 +168,25 @@ const Application = () => {
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
                                     <div className='input-field mt-5'>
-                                        <input type='number' name='minimumPay' placeholder=' ' onChange={formik.handleChange}
+                                        <input type='number' name='currentSalary' placeholder=' ' onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
-                                            value={formik.values.minimumPay} />
-                                        <label>Minimum Pay</label>
+                                            value={formik.values.currentSalary} />
+                                        <label>Current Salary</label>
                                     </div>
-                                    {formik.touched.minimumPay && formik.errors.minimumPay ? (
-                                        <div className="post-error">{formik.errors.minimumPay}</div>
+                                    {formik.touched.currentSalary && formik.errors.currentSalary ? (
+                                        <div className="post-error">{formik.errors.currentSalary}</div>
                                     ) : null}
                                 </div>
                                 <div className='col-lg-4 col-md-6'>
                                     <div className='input-field mt-5'>
-                                        <input type='number' name='maximumPay' placeholder=' '
+                                        <input type='number' name='expectedSalary' placeholder=' '
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
-                                            value={formik.values.maximumPay} />
-                                        <label>Maximum Pay</label>
+                                            value={formik.values.expectedSalary} />
+                                        <label>Expected Salary</label>
                                     </div>
-                                    {formik.touched.maximumPay && formik.errors.maximumPay ? (
-                                        <div className="post-error">{formik.errors.maximumPay}</div>
-                                    ) : null}
-                                </div>
-                                <div className='col-lg-4 col-md-6'>
-                                    <div className='industry mt-5'>
-                                        <select
-                                            name="rate"
-                                            onChange={formik.handleChange}
-                                            onBlur={formik.handleBlur}
-                                            value={formik.values.rate}
-                                            defaultValue=""
-                                        >
-                                            <option value="" disabled>Select Rate</option>
-                                            <option value="per-hour">Per Hour</option>
-                                            <option value="per-day">Per Day</option>
-                                            <option value="per-week">Per Week</option>
-                                            <option value="per-month">Per Month</option>
-                                            <option value="per-year">Per Year</option>
-                                        </select>
-                                    </div>
-                                    {formik.touched.rate && formik.errors.rate ? (
-                                        <div className="post-error">{formik.errors.rate}</div>
+                                    {formik.touched.expectedSalary && formik.errors.expectedSalary ? (
+                                        <div className="post-error">{formik.errors.expectedSalary}</div>
                                     ) : null}
                                 </div>
                                 <div className="form-btn">

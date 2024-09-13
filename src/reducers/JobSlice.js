@@ -10,9 +10,9 @@ export const createJob = createAsyncThunk('jobs/createJob', async ({ jobData, co
     }
 });
 
-export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async (config, { rejectWithValue }) => {
+export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async (params, { rejectWithValue }) => {
     try {
-        const response = await service.getAllJobs(config);
+        const response = await service.getAllJobs(params);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data);
@@ -48,6 +48,8 @@ export const deleteJob = createAsyncThunk('jobs/deleteJob', async ({ jobId, conf
 const initialState = {
     jobs: [],
     job: null,
+    currentPage: 1,
+    totalPages: 1,
     loading: false,
     error: null,
 };
@@ -67,7 +69,7 @@ const jobSlice = createSlice({
             })
             .addCase(createJob.fulfilled, (state, action) => {
                 state.loading = false;
-                state.jobs.push(action.payload);
+                state.jobs = (action.payload);
             })
             .addCase(createJob.rejected, (state, action) => {
                 state.loading = false;

@@ -24,6 +24,7 @@ const Navbar = () => {
   const [logoutModel, setLogoutModel] = useState(false);
   const isAuthenticated = useSelector((state) => state.users.user);
   const handleClickOpen = () => setIsModalOpen(true);
+  console.log(isAuthenticated, 'isAuthenticated');
   const handleNavOpen = () => {
     setNavOpen(true);
     setClosing(false);
@@ -95,7 +96,7 @@ const Navbar = () => {
                     <li><NavLink to="/privacy-policy" className={location.pathname === '/privacy-policy' ? 'active' : ''}>Privacy Policy</NavLink></li>
                     <li><NavLink to="/terms-and-conditions" className={location.pathname === '/terms-and-conditions' ? 'active' : ''}>Terms & Conditions</NavLink></li>
                     <li><NavLink to="/contact-us" className={location.pathname === '/contact-us' ? 'active' : ''}>Contact</NavLink></li>
-                    {isAuthenticated ? (
+                    {isAuthenticated && !window.location.pathname.includes('/role-selection')&& !window.location.pathname.includes('/login')  ? (
                       <>
                         <div className='chat' >
                           <Link to='/chat-dashboard'><ChatIcon /></Link>
@@ -107,7 +108,7 @@ const Navbar = () => {
                     ) : (
                       ''
                     )}
-                    {isAuthenticated ? (
+                    {isAuthenticated && !window.location.pathname.includes('/role-selection') && !window.location.pathname.includes('/login') ? (
                       <div className='profile' onClick={handleClickOpen} >
                         <img src={defaultImg} alt="Profile" className="profile-icon" />
                       </div>
@@ -119,7 +120,7 @@ const Navbar = () => {
                   </ul>
                 </nav>
                 <div className="navbar-left-icons">
-                  {isAuthenticated ? (
+                  {isAuthenticated && !window.location.pathname.includes('/role-selection')&& !window.location.pathname.includes('/login') ? (
                     <>
                       <div className='chat' >
                         <Link to='/chat-dashboard'><ChatIcon /></Link>
@@ -132,7 +133,7 @@ const Navbar = () => {
                     ''
                   )}
                   {
-                    isAuthenticated ? (
+                    isAuthenticated  && !window.location.pathname.includes('/role-selection')&& !window.location.pathname.includes('/login') ? (
                       <div className='profile' onClick={handleClickOpen} >
                         <img src={defaultImg} alt="Profile" className="profile-icon" />
                       </div>

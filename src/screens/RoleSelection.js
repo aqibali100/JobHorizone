@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getUserById, updateUserRole } from '../reducers/UserSlice';
+import Loading from '../components/loading/Loading';
 
 
 const RoleSelection = () => {
@@ -14,6 +15,7 @@ const RoleSelection = () => {
     const navigate = useNavigate();
     const [selectedRole, setSelectedRole] = useState(null);
     const user = useSelector((state) => state.users.user);
+    const [loading, setLoading] = useState(false);
     console.log(user, 'user');
     useEffect(() => {
         if (userId) {
@@ -27,14 +29,17 @@ const RoleSelection = () => {
             setSelectedRole(role);
         }
     };
-    const handleNextClick = () => {
+    const handleNextClick = async () => {
         if (selectedRole) {
-            dispatch(updateUserRole({ userId, role: selectedRole }));
-            toast.success('Registration successful!');
-            if (selectedRole === 'employer') {
-                navigate('/employer-dashboard');
-            } else {
-                navigate('/');
+            setLoading(true);
+            try {
+                await dispatch(updateUserRole({ userId, role: selectedRole }));
+                toast.success('Registration successful!');
+                navigate('/login');
+            } catch (error) {
+                toast.error('An error occurred while updating the role.');
+            } finally {
+                setLoading(false);
             }
         }
     };
@@ -97,7 +102,7 @@ const RoleSelection = () => {
                         <div className="row mt-3">
                             <div className="col-12">
                                 <div className="role-btn">
-                                    <button type="submit" onClick={handleNextClick}>Next</button>
+                                    <button type="submit" onClick={handleNextClick}>{loading ? <Loading /> : 'Next'}</button>
                                 </div>
                             </div>
                         </div>

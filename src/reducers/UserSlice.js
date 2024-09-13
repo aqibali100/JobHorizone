@@ -15,7 +15,6 @@ export const registerUser = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await service.createUser(userData);
-      localStorage.setItem('user', JSON.stringify(response.data));
       return response.data.userId;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);

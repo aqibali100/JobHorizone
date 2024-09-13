@@ -199,7 +199,8 @@ const Home = () => {
               </div>
             ) : (
               <>
-                {jobs
+                {jobs?.docs
+                  .slice()
                   .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                   .slice(0, 6)
                   .map((job) => (
@@ -433,51 +434,51 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div class="process-bg mt-5 pt-5">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="process-heading text-center">
+      <div className="process-bg mt-5 pt-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="process-heading text-center">
                 <h2>Our Job<span className='common'> Process</span></h2>
               </div>
             </div>
           </div>
-          <div class="row mt-5 d-flex justify-content-center pt-3">
-            <div class="col-lg-4 col-md-6 mb-5">
-              <div class="process-card">
-                <div class="card-icon text-center mt-2">
+          <div className="row mt-5 d-flex justify-content-center pt-3">
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="process-card">
+                <div className="card-icon text-center mt-2">
                   <GroupIcon />
                 </div>
-                <div class="card-heading">
+                <div className="card-heading">
                   <h5>Create Account</h5>
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                   <p>Sign up to start your journey. Create a personalized profile that highlights your skills and experience to attract potential employers.</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5">
-              <div class="process-card">
-                <div class="card-icon text-center mt-2">
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="process-card">
+                <div className="card-icon text-center mt-2">
                   <SearchIcon />
                 </div>
-                <div class="card-heading">
+                <div className="card-heading">
                   <h5>Search Job</h5>
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                   <p>Explore a wide range job opportunities that match your skills and interests. Use advanced search filters to find perfect job for you.</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5">
-              <div class="process-card">
-                <div class="card-icon text-center mt-2">
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="process-card">
+                <div className="card-icon text-center mt-2">
                   <InsertDriveFileIcon />
                 </div>
-                <div class="card-heading">
+                <div className="card-heading">
                   <h5>Upload Resume</h5>
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                   <p>Enhance your chances of getting noticed by uploading your resume. Our platform allows you  easily update and manage.</p>
                 </div>
               </div>
