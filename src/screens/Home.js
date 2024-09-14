@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row mt-5 pt-4">
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -71,7 +71,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -85,7 +85,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -99,7 +99,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -113,7 +113,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -127,7 +127,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -144,7 +144,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -164,7 +164,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mb-4">
+            <div className="col-md-6 col-lg-3 mb-4">
               <div className="plateform-cards">
                 <div className="card-flex d-flex gap-4">
                   <div className="card-icon">
@@ -242,64 +242,6 @@ const Home = () => {
                 </div>
               </>
             )}
-          </div>
-        </div>
-      </div>
-      <div className="review-bg">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="review-text">
-                <h1 className='text-center'><span>Reviews</span> of People Who Have<br></br>
-                  Found Jobs Through Job<span>Horizon</span></h1>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col">
-              <Carousel className="custom-carousel">
-                <Carousel.Item>
-                  <div className="slider-card mt-5">
-                    <div className="slider-card-text text-center">
-                      <p>Wow just Wow! JobHorizon is an excellent service that offers personal one to one help finding a job and they know how to please, i’d use them again!</p>
-                    </div>
-                    <div className="slider-card-img">
-                      <img src={sliderImg1} alt='slider-img'></img>
-                    </div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <div className="slider-card mt-5">
-                    <div className="slider-card-text text-center">
-                      <p>Without JobHorizon i’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite believe the service level that they offer!</p>
-                    </div>
-                    <div className="slider-card-img">
-                      <img src={sliderImg2} alt='slider-img'></img>
-                    </div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <div className="slider-card mt-5">
-                    <div className="slider-card-text text-center">
-                      <p>If I didn’t find JobHorizon I’m pretty sure i’d be no where, they helped me find a job in less than 2 days and the job is amazing,  amazing service!</p>
-                    </div>
-                    <div className="slider-card-img">
-                      <img src={sliderImg3} alt='slider-img'></img>
-                    </div>
-                  </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <div className="slider-card mt-5">
-                    <div className="slider-card-text text-center">
-                      <p>Excellent service offering a personal touch, if I had an issue they were no longer than a phone call away and were always quick to respond.</p>
-                    </div>
-                    <div className="slider-card-img">
-                      <img src={sliderImg4} alt='slider-img'></img>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              </Carousel>
-            </div>
           </div>
         </div>
       </div>
@@ -482,6 +424,64 @@ const Home = () => {
                   <p>Enhance your chances of getting noticed by uploading your resume. Our platform allows you  easily update and manage.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="review-bg">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="review-text">
+                <h1 className='text-center'><span>Reviews</span> of People Who Have<br></br>
+                  Found Jobs Through Job<span>Horizon</span></h1>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-5">
+            <div className="col">
+              <Carousel className="custom-carousel">
+                <Carousel.Item>
+                  <div className="slider-card mt-5">
+                    <div className="slider-card-text text-center">
+                      <p>Wow just Wow! JobHorizon is an excellent service that offers personal one to one help finding a job and they know how to please, i’d use them again!</p>
+                    </div>
+                    <div className="slider-card-img">
+                      <img src={sliderImg1} alt='slider-img'></img>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className="slider-card mt-5">
+                    <div className="slider-card-text text-center">
+                      <p>Without JobHorizon i’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite believe the service level that they offer!</p>
+                    </div>
+                    <div className="slider-card-img">
+                      <img src={sliderImg2} alt='slider-img'></img>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className="slider-card mt-5">
+                    <div className="slider-card-text text-center">
+                      <p>If I didn’t find JobHorizon I’m pretty sure i’d be no where, they helped me find a job in less than 2 days and the job is amazing,  amazing service!</p>
+                    </div>
+                    <div className="slider-card-img">
+                      <img src={sliderImg3} alt='slider-img'></img>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className="slider-card mt-5">
+                    <div className="slider-card-text text-center">
+                      <p>Excellent service offering a personal touch, if I had an issue they were no longer than a phone call away and were always quick to respond.</p>
+                    </div>
+                    <div className="slider-card-img">
+                      <img src={sliderImg4} alt='slider-img'></img>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
             </div>
           </div>
         </div>

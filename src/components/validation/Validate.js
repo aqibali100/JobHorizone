@@ -43,6 +43,22 @@ export const ResretPasswordSchema = yup.object({
         .required('Password is required')
 });
 
+export const ContactFormSchema = yup.object({
+    name: yup.string()
+        .max(20, 'Name must be less than 20 characters')
+        .required('Name is required'),
+    email: yup.string()
+        .email('Invalid email address')
+        .required('Email is required'),
+    phone: yup.string()
+        .matches(/^[0-9]{10}$/, 'Phone number must be exactly 10 digits and only contain numbers')
+        .required('Phone number is required').min(0, 'Phone number must be greater than 0'),
+    message: yup.string()
+        .min(10, 'Message must be at least 10 characters')
+        .max(500, 'Message must be less than 500 characters')
+        .required('Message is required')
+});
+
 export const jobPostSchema = yup.object().shape({
     firstName: yup.string().required('First Name is required').max(30, 'First Name must be less than 30 characters'),
     lastName: yup.string().required('Last Name is required').max(30, 'Last Name must be less than 30 characters'),
@@ -73,33 +89,33 @@ export const jobPostSchema = yup.object().shape({
 
 export const ApplicationSchema = yup.object({
     firstName: yup.string()
-      .required('First Name is required')
-      .min(2, 'First Name must be at least 2 characters')
-      .max(50, 'First Name must not exceed 50 characters'),
+        .required('First Name is required')
+        .min(2, 'First Name must be at least 2 characters')
+        .max(50, 'First Name must not exceed 50 characters'),
     lastName: yup.string()
-      .required('Last Name is required')
-      .min(2, 'Last Name must be at least 2 characters')
-      .max(50, 'Last Name must not exceed 50 characters'),
+        .required('Last Name is required')
+        .min(2, 'Last Name must be at least 2 characters')
+        .max(50, 'Last Name must not exceed 50 characters'),
     Phone: yup.string()
-      .required('Phone number is required')
-      .matches(/^\d{10}$/, 'Phone number must be exactly 10 digits'),
+        .required('Phone number is required')
+        .matches(/^\d{10}$/, 'Phone number must be exactly 10 digits'),
     currentSalary: yup.number()
-      .required('Current Salary is required')
-      .positive('Current Salary must be a positive number')
-      .integer('Current Salary must be an integer'),
+        .required('Current Salary is required')
+        .positive('Current Salary must be a positive number')
+        .integer('Current Salary must be an integer'),
     Email: yup.string()
-      .required('Email is required')
-      .email('Email must be a valid email address'),
+        .required('Email is required')
+        .email('Email must be a valid email address'),
     expectedSalary: yup.number()
-      .required('Expected Salary is required')
-      .positive('Expected Salary must be a positive number')
-      .integer('Expected Salary must be an integer'),
+        .required('Expected Salary is required')
+        .positive('Expected Salary must be a positive number')
+        .integer('Expected Salary must be an integer'),
     Location: yup.string()
-      .required('Location is required')
-      .min(2, 'Location must be at least 2 characters')
-      .max(100, 'Location must not exceed 100 characters'),
+        .required('Location is required')
+        .min(2, 'Location must be at least 2 characters')
+        .max(100, 'Location must not exceed 100 characters'),
     experience: yup.string()
-      .required('Experience is required')
-      .min(10, 'Experience must be at least 10 characters')
-      .max(500, 'Experience must not exceed 500 characters'),
-  });
+        .required('Experience is required')
+        .min(10, 'Experience must be at least 10 characters')
+        .max(500, 'Experience must not exceed 500 characters'),
+});

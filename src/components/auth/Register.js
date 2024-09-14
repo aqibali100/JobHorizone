@@ -6,10 +6,10 @@ import Loading from '../loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
-import { LoginSchema, RegistrationSchema } from '../validation/Validate';
+import {  RegistrationSchema } from '../validation/Validate';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { registerUser } from '../../reducers/UserSlice';
 
 const Register = () => {
@@ -33,14 +33,14 @@ const Register = () => {
         onSubmit: async (values, { resetForm, setErrors }) => {
             setLoading(true);
             try {
-                const response =  await dispatch(registerUser({
+                const response = await dispatch(registerUser({
                     name: values.name,
                     email: values.email,
                     password: values.password,
                     phone: values.phone,
                 })).unwrap();
                 resetForm();
-                const userId = response; 
+                const userId = response;
                 navigate(`/role-selection/${userId}`);
             } catch (error) {
                 if (error?.message === 'Email is Already Registered!') {
@@ -138,8 +138,14 @@ const Register = () => {
                                         <div className="error">{formik.errors.phone}</div>
                                     ) : null}
                                     <div class="login-btn text-center mt-3">
-                                        <button className='btn' type="submit" disabled={loading}>
-                                            {loading ? <Loading /> : 'Sign Up'}
+                                        <button type="submit" className="btn btn-primary">
+                                            {loading ? (
+                                                <>
+                                                    <div class="loading-flex d-flex align-items-center gap-3">
+                                                        Waiting <Loading />
+                                                    </div>
+                                                </>
+                                            ) : 'Sign Up'}
                                         </button>
                                     </div>
                                     <div className='account text-center mt-4'>

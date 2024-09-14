@@ -9,6 +9,11 @@ import dropbox from '../assets/images/Dropbox.png'
 import slack from '../assets/images/Slack.png'
 import dribble from '../assets/images/Dribble.png'
 import achieveImg from '../assets/images/women.png'
+import Carousel from 'react-bootstrap/Carousel';
+import sliderImg1 from '../assets/images/testimonial-1-100x100.jpg'
+import sliderImg2 from '../assets/images/testimonial-2-100x100.jpg'
+import sliderImg3 from '../assets/images/testimonial-3-100x100.jpg'
+import sliderImg4 from '../assets/images/testimonial-4-100x100.jpg'
 import { Verified, Business, AttachMoney, Public } from '@mui/icons-material';
 
 const About = () => {
@@ -164,6 +169,64 @@ const About = () => {
                                     <p>Explore international job opportunities and apply for positions that fit your skills and location preferences.</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="review-bg">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <div className="review-text">
+                                <h1 className='text-center'><span>Reviews</span> of People Who Have<br></br>
+                                    Found Jobs Through Job<span>Horizon</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col">
+                            <Carousel className="custom-carousel">
+                                <Carousel.Item>
+                                    <div className="slider-card mt-5">
+                                        <div className="slider-card-text text-center">
+                                            <p>Wow just Wow! JobHorizon is an excellent service that offers personal one to one help finding a job and they know how to please, i’d use them again!</p>
+                                        </div>
+                                        <div className="slider-card-img">
+                                            <img src={sliderImg1} alt='slider-img'></img>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <div className="slider-card mt-5">
+                                        <div className="slider-card-text text-center">
+                                            <p>Without JobHorizon i’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite believe the service level that they offer!</p>
+                                        </div>
+                                        <div className="slider-card-img">
+                                            <img src={sliderImg2} alt='slider-img'></img>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <div className="slider-card mt-5">
+                                        <div className="slider-card-text text-center">
+                                            <p>If I didn’t find JobHorizon I’m pretty sure i’d be no where, they helped me find a job in less than 2 days and the job is amazing,  amazing service!</p>
+                                        </div>
+                                        <div className="slider-card-img">
+                                            <img src={sliderImg3} alt='slider-img'></img>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <div className="slider-card mt-5">
+                                        <div className="slider-card-text text-center">
+                                            <p>Excellent service offering a personal touch, if I had an issue they were no longer than a phone call away and were always quick to respond.</p>
+                                        </div>
+                                        <div className="slider-card-img">
+                                            <img src={sliderImg4} alt='slider-img'></img>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                            </Carousel>
                         </div>
                     </div>
                 </div>

@@ -34,8 +34,9 @@ const Login = () => {
         const response = await dispatch(loginUser(values)).unwrap();
         const { user } = response;
         console.log(user, 'user');
-        resetForm();
+        await new Promise((resolve) => setTimeout(resolve, 2000));
         toast.success('Login successful!');
+        resetForm();
         if (user.role === 'employer') {
           navigate('/employer-dashboard');
         } else {
@@ -117,8 +118,14 @@ const Login = () => {
                     </div>
                   </div>
                   <div class="login-btn text-center mt-3">
-                    <button className='btn' type="submit" disabled={loading}>
-                      {loading ? <Loading /> : 'Login'}
+                    <button type="submit" className="btn">
+                      {loading ? (
+                        <>
+                          <div class="loading-flex d-flex align-items-center gap-3 justify-content-center">
+                            Waiting <Loading />
+                          </div>
+                        </>
+                      ) : 'Login'}
                     </button>
                   </div>
                   <div className='account text-center mt-4'>

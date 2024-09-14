@@ -22,7 +22,7 @@
     text-decoration: none;
     font-size: 10px;
 }
-.login-btn button{
+.login-btn{
     width: 100%;
     background: #4440da;
     border-radius: 10px;
@@ -30,10 +30,16 @@
     font-weight: 700;
     font-size: 19px;
 }
-.login-btn button:hover{
+.login-btn button{
+    color: white;
+    width: 100%;
+    font-size: 19px;
+    font-weight: 700;
+}
+/* .login-btn button:hover{
     background: #4440da;
     color: white;
-}
+} */
 .radio p{
     font-size: 12px;
 }
