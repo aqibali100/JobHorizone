@@ -13,6 +13,30 @@
     height: 80vh;
 }
 
+.technology-img {
+    height: 212px;
+}
+
+.technology-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.technology-name h2 {
+    color: black;
+}
+
+.list-unstyled {
+    color: black;
+    font-weight: 700;
+}
+
+.technology {
+    border: 2px solid #4440da;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .hero-text {
     text-align: center;
 }

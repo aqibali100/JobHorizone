@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../assets/styles/Login.css'
 import loginBG from '../../assets/images/bg.png'
-import logo from '../../assets/images/logo.jpg'
+import logo from '../../assets/images/loyaltyPromo.jpg'
 import Loading from '../loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
@@ -72,7 +72,7 @@ const Login = () => {
                   <div className='login-icon'>
                     <img className='avatar' src={logo} alt="Avatar" />
                   </div>
-                  <h2 className="title text-center mt-3">Welcome Back To JobHorizon</h2>
+                  <h2 className="title text-center mt-3">Welcome Back To LoyaltyPromo</h2>
                   <div className="input-div">
                     <div className="div">
                       <input

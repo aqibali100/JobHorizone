@@ -23,10 +23,12 @@ import ProtectedRoute from './components/ProtectedRoutes'
 import Chat from './screens/Chat';
 import ViewJob from './screens/ViewJob';
 import Application from './screens/Application';
+import ScrollToTop from './components/Scrolltotop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -37,7 +39,7 @@ function App() {
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/role-selection/:userId" element={<RoleSelection />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/all-jobs" element={<Jobs />} />
+        <Route path="/services" element={<Jobs />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
@@ -81,7 +83,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-           <Route
+        <Route
           path="/application-form/:jobId"
           element={
             <ProtectedRoute>

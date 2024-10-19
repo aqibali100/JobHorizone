@@ -25,50 +25,83 @@ const Terms = () => {
                         <div class="col">
                             <div class="terms-text">
                                 <h3 className='terms-heading mb-3'>Terms and Conditions</h3>
-                                <p className='terms-para mb-5'>Welcome to JobHorizon! These terms and conditions outline the rules and regulations for the use of JobHorizon's website, accessible at https://thejobhorizon.com. By accessing this website, we assume you accept these terms and conditions. Do not continue to use JobHorizon if you do not agree to all of the terms and conditions stated on this page.</p>
+                                <p className='terms-para mb-5'>Welcome to LoyaltyPromo. These terms and conditions outline the rules and regulations for the use of LoyaltyPromo's website and services.By accessing this website and engaging our services, we assume you accept these terms and conditions in full. Do not continue to use LoyaltyPromo’s website if you do not agree with all the terms and conditions stated on this page.</p>
 
-                                <h3 className='terms-heading mb-3'>1: Introduction</h3>
-                                <p className='terms-para mb-5'>JobHorizon we operates an online platform that offers trusted job opportunities from across the globe. These terms and conditions govern your use of our website, services, and any content provided by us. By using our site, you agree to adhere to these terms.</p>
+                                <h3 className='terms-heading mb-3'>1: Acceptance of Terms</h3>
+                                <p className='terms-para mb-5'>By accessing our website or using any of our services (SEO, content writing, graphic design, UI/UX design, etc.), you acknowledge that you have read, understood, and agree to be bound by these terms. These terms apply to all visitors, clients, and anyone who accesses or uses our services.</p>
 
-                                <h3 className='terms-heading mb-3'>2: Eligibility</h3>
-                                <p className='terms-para mb-5'>To use JobHorizon, you must be at least 18 years old or have parental or legal guardian consent. By using the platform, you confirm that you meet this requirement and are legally able to enter into a binding contract.</p>
+                                <h3 className='terms-heading mb-3'>2: Scope of Services</h3>
+                                <p className='terms-para mb-5'>LoyaltyPromo provides a variety of digital services, including but not limited to:<br></br><br></br>
+                                   1: Search Engine Optimization (SEO)<br></br>
+                                   2: Content Writing and Copywriting<br></br>
+                                   3: Graphic Design<br></br>
+                                   4: UI/UX Design<br></br>
+                                   5: Web Design and Development<br></br>
+                                   6: Digital Marketing and Advertising<br></br>
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>3: Job Postings</h3>
-                                <p className='terms-para mb-5'>JobHorizon allows employers to post job openings and job seekers to browse and apply for jobs. We strive to ensure that all job postings are accurate and legitimate, but we do not guarantee the authenticity of every listing. JobHorizon is not responsible for:
+                                <h3 className='terms-heading mb-3'>3: Payment Terms</h3>
+                                <p className='terms-para mb-5'>Failure to pay on time may result in delayed services or termination of the contract.
                                     <ul>
-                                        <li>Verifying the credentials of employers or job listings.</li>
-                                        <li>Any consequences resulting from applying for or accepting a job listed on our platform</li>
-                                        <li>The terms and conditions of employment contracts established between employers and job seekers.</li>
+                                        <li>Payment for our services is required as per the agreement or invoice issued.</li>
+                                        <li>Payment must be made via the methods specified in the invoice.</li>
+                                        <li>For ongoing services, payment may be made on a recurring monthly or quarterly basis as specified in the contract.</li>
+                                        <li>Unless otherwise agreed upon, 50% of the total cost must be paid upfront before the commencement of any work. The remaining 50% will be due upon the completion of the project..</li>
                                     </ul>
                                 </p>
 
-                                <h3 className='terms-heading mb-3'>4: Prohibited Uses</h3>
-                                <p className='terms-para mb-5'>You are prohibited from using JobHorizon for:
+                                <h3 className='terms-heading mb-3'>4: Service Delivery & Timelines</h3>
+                                <p className='terms-para mb-5'>
                                     <ul>
-                                        <li>Posting misleading or fraudulent job openings.</li>
-                                        <li>Harassing or abusing other users, including employers and job seekers.</li>
-                                        <li>Engaging in any activity that disrupts or interferes with the proper functioning of the platform.</li>
-                                        <li>Uploading or distributing viruses or any other harmful code.</li>
+                                        <li>LoyaltyPromo will make reasonable efforts to meet project deadlines as specified in the agreement. However, any timelines provided are estimates and are subject to change due to unforeseen circumstances.</li>
+                                        <li>If delays are caused by the Client’s failure to provide necessary information, feedback, or materials, LoyaltyPromo reserves the right to extend deadlines.</li>
                                     </ul>
                                 </p>
 
-                                <h3 className='terms-heading mb-3'>5: Intellectual Property</h3>
-                                <p className='terms-para mb-5'>All content published on the JobHorizon website, including but not limited to text, images, logos, and software, is the intellectual property of JobHorizon or our licensors. You may not use, reproduce, distribute, or modify any content from this site without explicit permission from JobHorizon.</p>
+                                <h3 className='terms-heading mb-3'>5: Revisions and Feedback</h3>
+                                <p className='terms-para mb-5'>
+                                    <ul>
+                                        <li>The number of revisions and feedback rounds will be agreed upon before the project starts. Additional revisions outside the agreed scope may incur extra charges.</li>
+                                        <li>Feedback must be provided within [X] days of receiving the draft or deliverable. Failure to provide feedback within this time frame will result in the project being considered approved.</li>
+                                    </ul>
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>6: User-Generated Content</h3>
-                                <p className='terms-para mb-5'>JobHorizon may allow users to post reviews, comments, or other content. By submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, distribute, and display your content in connection with the operation of our platform.</p>
+                                <h3 className='terms-heading mb-3'>6:  Intellectual Property</h3>
+                                <p className='terms-para mb-5'>
+                                    <ul>
+                                        <li>All materials, content, and services provided by LoyaltyPromo, including logos, designs, text, graphics, and software, are the intellectual property of LoyaltyPromo or its licensors unless otherwise stated.</li>
+                                        <li>Once full payment has been made and the project is completed, the intellectual property of the final deliverables will be transferred to the Client. However, LoyaltyPromo reserves the right to display the work in its portfolio and marketing materials unless otherwise agreed.</li>
+                                    </ul>
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>7: Termination of Use</h3>
-                                <p className='terms-para mb-5'>JobHorizon reserves the right to suspend or terminate your access to the platform at any time, for any reason, without notice, including but not limited to violations of these terms and conditions.</p>
+                                <h3 className='terms-heading mb-3'>7:   Client Responsibilities</h3>
+                                <p className='terms-para mb-5'>
+                                    <ul>
+                                        <li>The Client agrees to provide accurate, up-to-date information and any necessary materials to complete the project. Failure to provide these may result in delays or additional charges.</li>
+                                        <li>The Client agrees to cooperate with LoyaltyPromo during the project to ensure successful delivery.</li>
+                                    </ul>
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>8:  Third-Party Links</h3>
-                                <p className='terms-para mb-5'>Our platform may contain links to third-party websites or services that are not owned or controlled by JobHorizon. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites. Users access third-party websites at their own risk.</p>
+                                <h3 className='terms-heading mb-3'>8:   Confidentiality</h3>
+                                <p className='terms-para mb-5'>
+                                LoyaltyPromo agrees to keep all Client information confidential and will not disclose it to any third parties without prior consent, except when required by law or when necessary to perform the agreed services.
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>9:  Disclaimer</h3>
-                                <p className='terms-para mb-5'>The services provided by JobHorizon are on an "as-is" and "as-available" basis. We do not guarantee that our platform will meet your specific requirements or expectations. We disclaim any warranties, either express or implied, regarding the accuracy, reliability, or completeness of any content or job postings on the platform.</p>
+                                <h3 className='terms-heading mb-3'>9:    Limitation of Liability</h3>
+                                <p className='terms-para mb-5'>
+                                    <ul>
+                                        <li>LoyaltyPromo will not be held liable for any damages resulting from the use of its services, including but not limited to loss of profits, data, or business interruption.</li>
+                                        <li>Our liability for any claim related to the services provided will be limited to the amount paid by the Client for that specific service</li>
+                                    </ul>
+                                </p>
 
-                                <h3 className='terms-heading mb-3'>10:  Privacy</h3>
-                                <p className='terms-para mb-5'>Your privacy is important to us. Please refer to our Privacy Policy for detailed information about how we collect, use, and protect your personal data. By using JobHorizon, you consent to the collection and use of your information in accordance with our Privacy Policy.</p>
+                                <h3 className='terms-heading mb-3'>10:     Refund Policy</h3>
+                                <p className='terms-para mb-5'>
+                                    <ul>
+                                        <li>Refunds will only be provided under specific circumstances, such as the failure to deliver services as per the agreed scope. Any requests for refunds must be made in writing and will be reviewed on a case-by-case bas</li>
+                                        <li>No refunds will be issued for completed work or for services that have been rendered in part or in full.</li>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </div>

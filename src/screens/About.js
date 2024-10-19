@@ -27,7 +27,7 @@ const About = () => {
                                 <div class="hero-text">
                                     <h1>About <span>Us</span>
                                     </h1>
-                                    <p>We connect job seekers with opportunities that match their skills<br></br> and aspirations. </p>
+                                    <p>At LoyaltyPromo, we transform ideas into powerful digital solutions.<br></br> From SEO and content creation to graphic and UI/UX design, we deliver<br></br> tailored strategies that drive growth and success.</p>
                                 </div>
                             </div>
                         </div>
@@ -97,14 +97,15 @@ const About = () => {
                         </div>
                         <div class="col-md-6">
                             <div class="achieve-text">
-                                <h2>Find <span className='common'>Million Of Jobs</span> And<br></br>
-                                    Achieve Success</h2>
-                                <p>Explore countless career opportunities and unlock your path to success. Our platform offers a wealth of resources and tools to help you navigate the job market, enhance your skills, and reach your career goals. Embrace the journey of personal and professional growth with confidence. </p>
+                                <h2>Discover <span className='common'>Premium Digital Services</span><br></br>
+                                    For Business Growth</h2>
+                                <p>At LoyaltyPromo, we offer expert digital services, including SEO optimization, content writing, graphic design, and UI/UX design. Our team is dedicated to helping your business thrive online by enhancing brand visibility, improving user experiences, and crafting engaging content. Let us take your digital presence to the next level with tailored solutions designed for success.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="process-bg mt-5 pt-5">
                 <div class="container">
                     <div class="row">
@@ -121,38 +122,36 @@ const About = () => {
                                     <Verified style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
                                 <div className="card-heading">
-                                    <h5>Trusted Quality</h5>
+                                    <h5>Trusted Digital Services</h5>
                                 </div>
                                 <div className="card-text">
-                                    <p>Join our platform to showcase your skills with a trusted and quality-driven job search experience.</p>
+                                    <p>LoyaltyPromo deliver high-quality, reliable services tailored to meet your business needs. Trust us to help you grow with top-notch SEO, content writing, graphic design, and more.</p>
                                 </div>
                             </div>
                         </div>
-
                         <div className="col-lg-3 col-md-6 mb-5">
                             <div className="process-card">
                                 <div className="card-icon text-center mt-2">
                                     <Business style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
                                 <div className="card-heading">
-                                    <h5>Top Companies</h5>
+                                    <h5>Expert Collaboration</h5>
                                 </div>
                                 <div className="card-text">
-                                    <p>Connect with top companies worldwide offering jobs that match your qualifications and career goals.</p>
+                                    <p>Partner with LoyaltyPromo to access a network of skilled professionals and collaborate on high-quality digital projects that elevate your brand and drive results.</p>
                                 </div>
                             </div>
                         </div>
-
                         <div className="col-lg-3 col-md-6 mb-5">
                             <div className="process-card">
                                 <div className="card-icon text-center mt-2">
                                     <AttachMoney style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
                                 <div className="card-heading">
-                                    <h5>No Extra Charges</h5>
+                                    <h5>Transparent Pricing</h5>
                                 </div>
                                 <div className="card-text">
-                                    <p>Our platform is completely free to use for both job seekers and employers. No hidden costs or additional fees involved!</p>
+                                    <p>At LoyaltyPromo, we believe in transparency. Our digital services come with clear pricing, ensuring you receive top-quality solutions without any hidden fees or surprises.</p>
                                 </div>
                             </div>
                         </div>
@@ -163,13 +162,14 @@ const About = () => {
                                     <Public style={{ fontSize: 40, color: "#3f51b5" }} />
                                 </div>
                                 <div className="card-heading">
-                                    <h5>International Jobs</h5>
+                                    <h5>Global Reach</h5>
                                 </div>
                                 <div className="card-text">
-                                    <p>Explore international job opportunities and apply for positions that fit your skills and location preferences.</p>
+                                    <p>Leverage our global network to access a wide range of digital services and connect with clients worldwide. Experience the power of international collaboration with LoyaltyPromo.</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -178,8 +178,8 @@ const About = () => {
                     <div className="row">
                         <div className="col">
                             <div className="review-text">
-                                <h1 className='text-center'><span>Reviews</span> of People Who Have<br></br>
-                                    Found Jobs Through Job<span>Horizon</span></h1>
+                                <h1 className='text-center'><span>Client Reviews</span> of Businesses That Have<br></br>
+                                    Benefited from <span>LoyaltyPromo</span></h1>
                             </div>
                         </div>
                     </div>
@@ -189,7 +189,7 @@ const About = () => {
                                 <Carousel.Item>
                                     <div className="slider-card mt-5">
                                         <div className="slider-card-text text-center">
-                                            <p>Wow just Wow! JobHorizon is an excellent service that offers personal one to one help finding a job and they know how to please, i’d use them again!</p>
+                                            <p>LoyaltyPromo transformed our digital presence! Their SEO expertise and content writing skills helped us reach a wider audience and boosted our brand visibility.</p>
                                         </div>
                                         <div className="slider-card-img">
                                             <img src={sliderImg1} alt='slider-img'></img>
@@ -199,7 +199,7 @@ const About = () => {
                                 <Carousel.Item>
                                     <div className="slider-card mt-5">
                                         <div className="slider-card-text text-center">
-                                            <p>Without JobHorizon i’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite believe the service level that they offer!</p>
+                                            <p>Thanks to LoyaltyPromo, our graphic designs are now more engaging! Their creative team delivered stunning visuals that perfectly represent our brand.</p>
                                         </div>
                                         <div className="slider-card-img">
                                             <img src={sliderImg2} alt='slider-img'></img>
@@ -209,7 +209,7 @@ const About = () => {
                                 <Carousel.Item>
                                     <div className="slider-card mt-5">
                                         <div className="slider-card-text text-center">
-                                            <p>If I didn’t find JobHorizon I’m pretty sure i’d be no where, they helped me find a job in less than 2 days and the job is amazing,  amazing service!</p>
+                                            <p>Working with LoyaltyPromo for our UI/UX design has been a game changer. They made our website user-friendly, which led to increased customer satisfaction.</p>
                                         </div>
                                         <div className="slider-card-img">
                                             <img src={sliderImg3} alt='slider-img'></img>
@@ -219,7 +219,7 @@ const About = () => {
                                 <Carousel.Item>
                                     <div className="slider-card mt-5">
                                         <div className="slider-card-text text-center">
-                                            <p>Excellent service offering a personal touch, if I had an issue they were no longer than a phone call away and were always quick to respond.</p>
+                                            <p>The team at LoyaltyPromo is fantastic! Their dedication to quality and client satisfaction makes them a trusted partner for all our digital marketing needs.</p>
                                         </div>
                                         <div className="slider-card-img">
                                             <img src={sliderImg4} alt='slider-img'></img>

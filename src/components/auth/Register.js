@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../assets/styles/Login.css'
 import loginBG from '../../assets/images/bg.png'
-import logo from '../../assets/images/logo.jpg'
+import logo from '../../assets/images/loyaltyPromo.jpg'
 import Loading from '../loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';

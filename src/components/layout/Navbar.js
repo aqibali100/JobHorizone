@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../../assets/images/logo.jpg'
+import logo from '../../assets/images/loyaltyPromo.jpg'
 import '../../assets/styles/Navbar.css'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -72,7 +72,7 @@ const Navbar = () => {
                     isAuthenticated && isAuthenticated.user?.role === 'employer' ? (
                       <><Link to='/employer-dashboard'><div className="logo-img"><img src={logo} alt='logo' /></div></Link><Link to='/employer-dashboard'><p>Job<span>Horizon</span></p></Link></>
                     ) : (
-                      <><Link to='/'><div className="logo-img"><img src={logo} alt='logo' /></div></Link><Link to='/'><p>Job<span>Horizon</span></p></Link></>
+                      <><Link to='/'><div className="logo-img"><img src={logo} alt='logo' /></div></Link><Link to='/'><p>Loyalty<span>Promo</span></p></Link></>
                     )
                   }
                 </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
                       isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
                         ''
                       ) : (
-                        <li><NavLink to="/all-jobs" className={location.pathname === '/all-jobs' ? 'active' : ''}>All Jobs</NavLink></li>
+                        <li><NavLink to="/services" className={location.pathname === '/all-jobs' ? 'active' : ''}>Services</NavLink></li>
                       )
                     }
                     <li><NavLink to="/privacy-policy" className={location.pathname === '/privacy-policy' ? 'active' : ''}>Privacy Policy</NavLink></li>
@@ -169,7 +169,7 @@ const Navbar = () => {
                 isAuthenticated && isAuthenticated?.user?.role === 'employer' ? (
                   ''
                 ) : (
-                  <li><NavLink to="/all-jobs" onClick={handleLinkClick} className={location.pathname === '/all-jobs' ? 'active' : ''}>All Jobs</NavLink></li>
+                  <li><NavLink to="/services" onClick={handleLinkClick} className={location.pathname === '/all-jobs' ? 'active' : ''}>Services</NavLink></li>
                 )
               }
               <Link to='/privacy-policy' onClick={handleLinkClick}>Privacy Policy</Link>
