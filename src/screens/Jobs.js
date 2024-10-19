@@ -55,7 +55,7 @@ const Jobs = () => {
                       <li>3: SEO Optimization</li>
                       <li>4 :Content Management System (CMS)</li>
                     </ul>
-                    <h3 className='text-primary'>Price $50</h3>
+                    <h3 className='text-primary'>Price $200</h3>
                   </div>
                   <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
                 </div>
@@ -76,7 +76,7 @@ const Jobs = () => {
                       <li>3: E-commerce Solutions</li>
                       <li>4: Performance Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $100</h3>
+                    <h3 className='text-primary'>Price $300</h3>
                   </div>
                   <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
                 </div>
@@ -97,7 +97,7 @@ const Jobs = () => {
                       <li>3: Link Building</li>
                       <li>4: Performance Tracking</li>
                     </ul>
-                    <h3 className='text-primary'>Price $80</h3>
+                    <h3 className='text-primary'>Price $250</h3>
                   </div>
                   <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
                 </div>
@@ -118,7 +118,7 @@ const Jobs = () => {
                       <li>3: Marketing Materials</li>
                       <li>4: Social Media Graphics</li>
                     </ul>
-                    <h3 className='text-primary'>Price $70</h3>
+                    <h3 className='text-primary'>Price $350</h3>
                   </div>
                   <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
                 </div>
@@ -139,7 +139,7 @@ const Jobs = () => {
                       <li>3: Interactive UI Design</li>
                       <li>4: Usability Testing</li>
                     </ul>
-                    <h3 className='text-primary'>Price $120</h3>
+                    <h3 className='text-primary'>Price $400</h3>
                   </div>
                   <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get UI/UX Design Services">Get Now</a>
                 </div>
