@@ -204,7 +204,7 @@ const Jobs = () => {
                 </div>
                 <div className="technology-name text-white mt-4 text-center">
                   <h2 className='common-color'>Email Marketing</h2>
-                  <p className='mt-2 text-dark'>Targeted and Effective Email Campaigns</p>
+                  <p className='mt-2 text-dark'>Targeted and Effective Email Marketing Campaigns</p>
                   <div className="pricing mt-3">
                     <ul className='list-unstyled'>
                       <li>1: Audience Segmentation</li>
@@ -224,8 +224,8 @@ const Jobs = () => {
                   <img src={social} alt='Social Media Graphics Services Illustration' />
                 </div>
                 <div className="technology-name text-white mt-4 text-center">
-                  <h2 className='common-color'>Social Media Graphics</h2>
-                  <p className='mt-2 text-dark'>Creative Visuals for Social Platforms</p>
+                  <h2 className='common-color'>Social Media</h2>
+                  <p className='mt-2 text-dark'>Creative Visuals for Social Media Platforms</p>
                   <div className="pricing mt-3">
                     <ul className='list-unstyled'>
                       <li>1: Platform-Specific Designs</li>
