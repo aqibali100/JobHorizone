@@ -4,6 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import sliderImg1 from '../assets/images/testimonial-1-100x100.jpg'
 import sliderImg2 from '../assets/images/testimonial-2-100x100.jpg'
 import sliderImg3 from '../assets/images/testimonial-3-100x100.jpg'
+import Shopify from '../assets/images/shopify.jpeg'
+import WordPress from '../assets/images/wordpress.jpeg'
 import sliderImg4 from '../assets/images/testimonial-4-100x100.jpg'
 import resumeImg from '../assets/images/boy.png'
 import webdesign from '../assets/images/webdesign.jpg'
@@ -345,10 +347,52 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="technology">
+                <div className="technology-img">
+                  <img src={WordPress} alt='WordPress Services Illustration' />
+                </div>
+                <div className="technology-name text-white mt-4 text-center">
+                  <h2 className='common-color'>WordPress Services</h2>
+                  <p className='mt-2 text-dark'>Custom WordPress Solutions for Your outstanding Website</p>
+                  <div className="pricing mt-3">
+                    <ul className='list-unstyled'>
+                      <li>1: Website Setup & Configuration</li>
+                      <li>2: Theme Development & Customization</li>
+                      <li>3: Plugin Integration & Customization</li>
+                      <li>4: SEO & Performance Optimization</li>
+                    </ul>
+                    <h3 className='text-primary'>Price $170</h3>
+                  </div>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get WordPress Services">Get Now</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mb-5">
+              <div className="technology">
+                <div className="technology-img">
+                  <img src={Shopify} alt='Shopify Services Illustration' />
+                </div>
+                <div className="technology-name text-white mt-4 text-center">
+                  <h2 className='common-color'>Shopify Services</h2>
+                  <p className='mt-2 text-dark'>Custom Shopify Solutions for Your Online Store Easily</p>
+                  <div className="pricing mt-3">
+                    <ul className='list-unstyled'>
+                      <li>1: Store Setup & Configuration</li>
+                      <li>2: Theme Customization</li>
+                      <li>3: App Integration & Development</li>
+                      <li>4: Store Optimization & Maintenance</li>
+                    </ul>
+                    <h3 className='text-primary'>Price $150</h3>
+                  </div>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Shopify Services">Get Now</a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col text-center mb-5">
-            <a href="/services" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">View All Services</a>
+              <a href="/services" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">View All Services</a>
             </div>
           </div>
         </div>
