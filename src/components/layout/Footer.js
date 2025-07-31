@@ -23,9 +23,12 @@ const Footer = () => {
                             </div>
                             <div className="footer-text mt-3">
                                 <p>Join our community today and take the next step in your career journey<br></br> or grow your team with the best talent.</p>
-                              <div class="div mt-5">
-                              <strong className='mt-5 pt-5'>Email: </strong><span>info@loyaltypro.com</span>
-                              </div>
+                                <div class="div mt-5">
+                                    <strong className='mt-5 pt-5'>Email: </strong><span> loyaltypromosite@gmail.com</span><br></br>
+                                    <strong className='mt-5 pt-5'>Support Center: </strong><span>619-404-9343</span><br></br>
+                                    <strong className='mt-5 pt-5'>Office Address: </strong><span>13162 highway 8 business spc 153
+                                        El Cajon , California 92021</span><br></br>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 pt-3 text-center mb-5">

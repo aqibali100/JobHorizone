@@ -278,9 +278,9 @@ const Home = () => {
                       <li>3: SEO Optimization</li>
                       <li>4 :Content Management System (CMS)</li>
                     </ul>
-                    <h3 className='text-primary'>Price $200</h3>
+                    <h3 className='text-primary'>Price $270</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -301,7 +301,7 @@ const Home = () => {
                     </ul>
                     <h3 className='text-primary'>Price $300</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -320,9 +320,9 @@ const Home = () => {
                       <li>3: Link Building</li>
                       <li>4: Performance Tracking</li>
                     </ul>
-                    <h3 className='text-primary'>Price $250</h3>
+                    <h3 className='text-primary'>Price $370</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -343,7 +343,7 @@ const Home = () => {
                     </ul>
                     <h3 className='text-primary'>Price $350</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -362,9 +362,9 @@ const Home = () => {
                       <li>3: Plugin Integration & Customization</li>
                       <li>4: SEO & Performance Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $170</h3>
+                    <h3 className='text-primary'>Price $600</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get WordPress Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get WordPress Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -383,9 +383,9 @@ const Home = () => {
                       <li>3: App Integration & Development</li>
                       <li>4: Store Optimization & Maintenance</li>
                     </ul>
-                    <h3 className='text-primary'>Price $150</h3>
+                    <h3 className='text-primary'>Price $800</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Shopify Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Shopify Services">Buy Now</a>
                 </div>
               </div>
             </div>

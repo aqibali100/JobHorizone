@@ -65,9 +65,9 @@ const Jobs = () => {
                       <li>3: SEO Optimization</li>
                       <li>4 :Content Management System (CMS)</li>
                     </ul>
-                    <h3 className='text-primary'>Price $200</h3>
+                    <h3 className='text-primary'>Price $270</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ const Jobs = () => {
                     </ul>
                     <h3 className='text-primary'>Price $300</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -107,9 +107,9 @@ const Jobs = () => {
                       <li>3: Link Building</li>
                       <li>4: Performance Tracking</li>
                     </ul>
-                    <h3 className='text-primary'>Price $250</h3>
+                    <h3 className='text-primary'>Price $370</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const Jobs = () => {
                     </ul>
                     <h3 className='text-primary'>Price $350</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -149,9 +149,9 @@ const Jobs = () => {
                       <li>3: Interactive UI Design</li>
                       <li>4: Usability Testing</li>
                     </ul>
-                    <h3 className='text-primary'>Price $400</h3>
+                    <h3 className='text-primary'>Price $710</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get UI/UX Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get UI/UX Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -170,9 +170,9 @@ const Jobs = () => {
                       <li>3: Brand Identity Integration</li>
                       <li>4: Final Logo Delivery in Various Formats</li>
                     </ul>
-                    <h3 className='text-primary'>Price $30</h3>
+                    <h3 className='text-primary'>Price $590</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Logo Design Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Logo Design Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -191,9 +191,9 @@ const Jobs = () => {
                       <li>3: High-Quality Content Creation</li>
                       <li>4: Performance Tracking & Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $50</h3>
+                    <h3 className='text-primary'>Price $930</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Content Marketing Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Content Marketing Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -212,9 +212,9 @@ const Jobs = () => {
                       <li>3: High-Impact Email Design</li>
                       <li>4: Performance Analysis & Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $70</h3>
+                    <h3 className='text-primary'>Price $460</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Email Marketing Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Email Marketing Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -233,9 +233,9 @@ const Jobs = () => {
                       <li>3: High-Impact Visuals for Campaigns</li>
                       <li>4: Social Media Engagement Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $100</h3>
+                    <h3 className='text-primary'>Price $830</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Social Media Graphics Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Social Media Graphics Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -254,9 +254,9 @@ const Jobs = () => {
                       <li>3: Guest & Listener Engagement</li>
                       <li>4: Performance Tracking & Monetization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $130</h3>
+                    <h3 className='text-primary'>Price $740</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Podcast Marketing Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Podcast Marketing Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -275,9 +275,9 @@ const Jobs = () => {
                       <li>3: App Integration & Development</li>
                       <li>4: Store Optimization & Maintenance</li>
                     </ul>
-                    <h3 className='text-primary'>Price $150</h3>
+                    <h3 className='text-primary'>Price $800</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Shopify Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Shopify Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -296,9 +296,9 @@ const Jobs = () => {
                       <li>3: Plugin Integration & Customization</li>
                       <li>4: SEO & Performance Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $170</h3>
+                    <h3 className='text-primary'>Price $600</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get WordPress Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get WordPress Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -317,9 +317,9 @@ const Jobs = () => {
                       <li>3: App Integration & Customization</li>
                       <li>4: SEO & Performance Optimization</li>
                     </ul>
-                    <h3 className='text-primary'>Price $180</h3>
+                    <h3 className='text-primary'>Price $750</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Wix Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Wix Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -338,9 +338,9 @@ const Jobs = () => {
                       <li>3: Content Creation & Promotion</li>
                       <li>4: Performance Tracking & Reporting</li>
                     </ul>
-                    <h3 className='text-primary'>Price $220</h3>
+                    <h3 className='text-primary'>Price $900</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Affiliate Marketing Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Affiliate Marketing Services">Buy Now</a>
                 </div>
               </div>
             </div>
@@ -359,9 +359,9 @@ const Jobs = () => {
                       <li>3: Tag Optimization & Thumbnail Design</li>
                       <li>4: Performance Tracking & Analytics</li>
                     </ul>
-                    <h3 className='text-primary'>Price $270</h3>
+                    <h3 className='text-primary'>Price $950</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get YouTube SEO Services">Get Now</a>
+                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get YouTube SEO Services">Buy Now</a>
                 </div>
               </div>
             </div>
