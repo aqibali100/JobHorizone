@@ -266,21 +266,31 @@ const Home = () => {
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="technology">
                 <div className="technology-img">
-                  <img src={webdesign} alt='Web Design'></img>
+                  <img src={webdesign} alt="Web Design" />
                 </div>
                 <div className="technology-name text-white mt-4 text-center">
-                  <h2 className='common-color'>Web Design</h2>
-                  <p className='mt-2 text-dark'>Affordable and Professional Web Design Services and many more</p>
+                  <h2 className="common-color">Web Design</h2>
+                  <p className="mt-2 text-dark">Affordable and Professional Web Design Services and many more</p>
                   <div className="pricing mt-3">
-                    <ul className='list-unstyled'>
+                    <ul className="list-unstyled">
                       <li>1: Custom Website Design</li>
                       <li>2: Responsive Layout</li>
                       <li>3: SEO Optimization</li>
                       <li>4 :Content Management System (CMS)</li>
                     </ul>
-                    <h3 className='text-primary'>Price $270</h3>
+                    <h3 className="text-primary">Price $270</h3>
                   </div>
-                  <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Buy Now</a>
+                  {/* Use Link to redirect and pass data through URL parameters */}
+                  <Link
+                    to={{
+                      pathname: '/checkout',
+                      search: `?name=Web+Design&price=270`
+                    }}
+                    className="btn btn-primary mt-3"
+                    aria-label="Buy Web Design"
+                  >
+                    Buy Now
+                  </Link>
                 </div>
               </div>
             </div>

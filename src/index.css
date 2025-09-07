@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Style for form and error messages */
+label {
+  display: block;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+input {
+  width: 200px;
+  padding: 8px;
+  margin: 5px 0;
+}
+input.small {
+  width: 50px;
+}
+.twoColumn {
+  float: left;
+  margin: 0 30px 20px 0;
+}
+.clearAll {
+  clear: both;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}

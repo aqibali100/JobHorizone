@@ -24,6 +24,8 @@ import Chat from './screens/Chat';
 import ViewJob from './screens/ViewJob';
 import Application from './screens/Application';
 import ScrollToTop from './components/Scrolltotop';
+import { Check } from '@mui/icons-material';
+import Checkout from './screens/Checkout';
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         <Route path="/role-selection/:userId" element={<RoleSelection />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/services" element={<Jobs />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/terms-and-conditions" element={<Terms />} />
