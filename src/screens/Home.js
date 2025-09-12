@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import sliderImg1 from '../assets/images/testimonial-1-100x100.jpg'
 import sliderImg2 from '../assets/images/testimonial-2-100x100.jpg'
 import sliderImg3 from '../assets/images/testimonial-3-100x100.jpg'
+import support from '../assets/images/customer-support.png'
 import Shopify from '../assets/images/shopify.jpeg'
 import WordPress from '../assets/images/wordpress.jpeg'
 import sliderImg4 from '../assets/images/testimonial-4-100x100.jpg'
@@ -407,7 +408,36 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="resume mt-5">
+
+      <div className="stats-bg mt-5 text-center mb-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="stats-text">
+                <h1>
+                  Customer Assistance <span className='common'>For Service Providers</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className='row mt-5 d-flex align-items-center'>
+            <div className='col-md-6'>
+              <p className='text-start'>
+                At LoyaltyPromo, we are committed to providing exceptional customer assistance to all service providers, ensuring seamless experiences across our range of IT services, including web development, web design, SEO, WordPress, Shopify, and more. Whether you're looking for technical support, project consultation, or assistance with troubleshooting, our dedicated team is here to help. We work closely with service providers to understand their unique needs and deliver tailored solutions that empower businesses to thrive. With timely support and expert guidance, we ensure that your services are always running smoothly, helping you stay ahead of the competition.
+              </p>
+            </div>
+            <div className='col-md-6'>
+              <img src={support} alt='support-img' className='img-fluid border rounded shadow'></img>
+            </div>
+          </div>
+
+          <div className='row mt-4'>
+            <a href="/contact-us" className='btn btn-primary btn-lg w-25 mt-3 m-auto' aria-label="Get Graphics Design Services">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="resume mt-5 pt-5">
         <div className="container resume-bg">
           <div className="row">
             <div className="col-md-6">
