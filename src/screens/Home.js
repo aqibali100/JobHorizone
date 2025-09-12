@@ -431,8 +431,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='row mt-4'>
-            <a href="/contact-us" className='btn btn-primary btn-lg w-25 mt-3 m-auto' aria-label="Get Graphics Design Services">Contact Us</a>
+          <div class="row mt-5">
+            <div class="col text-center mb-5">
+              <a href="/contact-us" className='btn btn-primary mt-3' aria-label="Get Graphics Design Services">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
